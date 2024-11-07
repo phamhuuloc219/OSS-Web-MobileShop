@@ -1,5 +1,5 @@
-# OSS-Web-MobileShop
-Final project for open source software development course
+# Final project for open source software development course
+
 
 <h1 align="center">Hi 👋, I'm Pham Huu Loc</h1>
 <h3 align="left">Connect with me:</h3>
