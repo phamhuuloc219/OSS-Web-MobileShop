@@ -1,5 +1,5 @@
 <?php
-  include 'action.php';
+  include 'actionProduct.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
   <meta name="author" content="Sahil Kumar">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Admin</title>
+  <title>Admin - Product</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <!-- jQuery library -->
@@ -26,7 +26,7 @@
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="#">Manager User</a>
+    <a class="navbar-brand" href="index.php">Manager User</a>
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -35,10 +35,10 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="product.php">Product</a>
+          <a class="nav-link" href="product.php">product</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">CartProduct</a>
+          <a class="nav-link" href="#">CartProduct</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
@@ -53,7 +53,7 @@
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <h3 class="text-center text-dark mt-2">Manager User of Admin</h3>
+        <h3 class="text-center text-dark mt-2">Manager Product Phone</h3>
         <hr>
         <?php if (isset($_SESSION['response'])) { ?>
         <div class="alert alert-<?= $_SESSION['res_type']; ?> alert-dismissible text-center">
@@ -65,17 +65,25 @@
     </div>
     <div class="row">
       <div class="col-md-4">
-        <h3 class="text-center text-info">Add User</h3>
-        <form action="action.php" method="post" enctype="multipart/form-data">
+        <h3 class="text-center text-info">Add Product</h3>
+        <form action="actionProduct.php" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id" value="<?= $id; ?>">
           <div class="form-group">
-            <input type="text" name="name" value="<?= $name; ?>" class="form-control" placeholder="Enter name" required>
+            <input type="text" name="brand" value="<?= $brand; ?>" class="form-control" placeholder="Enter brand" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" value="<?= $email; ?>" class="form-control" placeholder="Enter e-mail" required>
+            <input type="text" name="name" value="<?= $name; ?>" class="form-control" placeholder="Enter e-name" required>
           </div>
           <div class="form-group">
-            <input type="password" name="password" value="<?= $password; ?>" class="form-control" placeholder="Enter password" required>
+            <input type="number" name="price" value="<?= $price; ?>" class="form-control" placeholder="Enter price" required>
+          </div>
+          <div class="form-group">
+            <input type="hidden" name="oldimage" value="<?= $image; ?>">
+            <input type="file" name="image" class="custom-file">
+            <img src="<?= $image; ?>" width="120" class="img-thumbnail">
+          </div>
+          <div class="form-group">
+            <input type="date" name="date" value="<?= $date; ?>" class="form-control" placeholder="Enter date" required>
           </div>
           <div class="form-group">
             <?php if ($update == true) { ?>
@@ -88,34 +96,37 @@
       </div>
       <div class="col-md-8">
         <?php
-          $query = 'SELECT * FROM users';
+          $query = 'SELECT * FROM product';
           $stmt = $conn->prepare($query);
           $stmt->execute();
           $result = $stmt->get_result();
         ?>
-        <h3 class="text-center text-info">Show user all Database</h3>
+        <h3 class="text-center text-info">Infomation Product Company MobilePhone</h3>
         <table class="table table-hover" id="data-table">
           <thead>
             <tr>
-              <th>#id</th>
+              <th>id</th>
+              <th>Image</th>
               <th>Name</th>
-              <th>Email</th>
-              <th>Password</th>
+              <th>Brand</th>
+              <th>Price</th>
+              <th>Date</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
             <?php while ($row = $result->fetch_assoc()) { ?>
             <tr>
-              <td><?= $row['id']; ?></td>
-              <td><?= $row['username']; ?></td>
-              <td><?= $row['email']; ?></td>
-              <td><?= $row['password']; ?></td>
-              
+              <td><?= $row['item_id']; ?></td>
+              <td><img src=".<?= $row['item_image']; ?>" width="25"></td>
+              <td><?= $row['item_name']; ?></td>
+              <td><?= $row['item_brand']; ?></td>
+              <td><?= $row['item_price']; ?></td>
+              <td><?= $row['item_register']; ?></td>
               <td>
-                <a href="details.php?details=<?= $row['id']; ?>" class="badge badge-primary p-2">Details</a> |
-                <a href="action.php?delete=<?= $row['id']; ?>" class="badge badge-danger p-2" onclick="return confirm('Do you want delete this record?');">Delete</a> |
-                <a href="index.php?edit=<?= $row['id']; ?>" class="badge badge-success p-2">Edit</a>
+                <a href="detailsProduct.php?details=<?= $row['item_id']; ?>" class="badge badge-primary p-2">Details</a> |
+                <a href="actionProduct.php?delete=<?= $row['item_id']; ?>" class="badge badge-danger p-2" onclick="return confirm('Do you want delete this record?');">Delete</a> |
+                <a href="product.php?edit=<?= $row['item_id']; ?>" class="badge badge-success p-2">Edit</a>
               </td>
             </tr>
             <?php } ?>
