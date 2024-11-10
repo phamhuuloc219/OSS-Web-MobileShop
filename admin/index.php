@@ -111,6 +111,7 @@
               <td><?= $row['username']; ?></td>
               <td><?= $row['email']; ?></td>
               <td><?= $row['password']; ?></td>
+              
               <td>
                 <a href="#" class="badge badge-primary p-2">Details</a> |
                 <a href="action.php?delete=<?= $row['id']; ?>" class="badge badge-danger p-2" onclick="return confirm('Do you want delete this record?');">Delete</a> |
