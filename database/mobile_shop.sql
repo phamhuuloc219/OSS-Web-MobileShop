@@ -105,11 +105,6 @@ ALTER TABLE `cart`
 ALTER TABLE `product`
   ADD PRIMARY KEY (`item_id`);
 
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`user_id`);
 
 --
 -- Indexes for table `users`
@@ -133,11 +128,6 @@ ALTER TABLE `cart`
 ALTER TABLE `product`
   MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`

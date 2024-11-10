@@ -2,7 +2,7 @@
 	const DBHOST = 'localhost';
 	const DBUSER = 'root';
 	const DBPASS = '';
-	const DBNAME = 'shoppe';
+	const DBNAME = 'mobile_shop';
 
 	$conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 
