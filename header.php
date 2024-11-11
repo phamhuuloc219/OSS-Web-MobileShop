@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: login/index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +54,7 @@
         </p>
         <div class="font-rale font-size-14">
           <a href="login/logout.php" class="px-3 border-right border-left text-dark">Logout</a>
-          <a href="#" class="px-3 border-right text-dark"></a>
+          <a href="#" class="px-3 border-right text-dark"><?php echo "" . $_SESSION['username'] . ""; ?></a>
          
         </div>
       </div>
@@ -56,7 +62,7 @@
       <!-- Primary Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
 
-      <a class="navbar-brand" href="index.php">Mobile Shope</a>
+      <a class="navbar-brand" href="index.php">Mobile Shop</a>
   
     
         <button

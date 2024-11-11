@@ -23,8 +23,8 @@
 	}
 	if(isset($_GET['delete'])){
 		$id=$_GET['delete'];
-		$sql="SELECT FROM users WHERE 0";
-		$stmt2=$conn->prepare($sql);
+		// $sql="SELECT FROM users WHERE 0";
+		// $stmt2=$conn->prepare($sql);
 		$query="DELETE FROM users WHERE id=?";
 		$stmt=$conn->prepare($query);
 		$stmt->bind_param("i",$id);

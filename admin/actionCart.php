@@ -21,8 +21,8 @@
 	}
 	if(isset($_GET['delete'])){
 		$id=$_GET['delete'];
-		$sql="SELECT FROM cart WHERE 0";
-		$stmt2=$conn->prepare($sql);
+		// $sql="SELECT FROM cart WHERE 0";
+		// $stmt2=$conn->prepare($sql);
 		$query="DELETE FROM cart WHERE cart_id=?";
 		$stmt=$conn->prepare($query);
 		$stmt->bind_param("i",$id);
