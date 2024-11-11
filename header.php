@@ -53,8 +53,8 @@ if (!isset($_SESSION['username'])) {
           Hòa,SĐt:0376282119
         </p>
         <div class="font-rale font-size-14">
-          <a href="login/logout.php" class="px-3 border-right border-left text-dark">Logout</a>
-          <a href="#" class="px-3 border-right text-dark"><?php echo "" . $_SESSION['username'] . ""; ?></a>
+          <a href="login/logout.php" class="px-3 border-right border-left text-dark"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          <a href="#" class="px-3 border-right text-dark"><i class="fas fa-user"></i> <?php echo "" . $_SESSION['username'] . ""; ?></a>
          
         </div>
       </div>
