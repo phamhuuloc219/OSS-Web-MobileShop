@@ -35,15 +35,15 @@ if (isset($_POST['add'])) {
                 $_SESSION['res_type'] = "success";
                 header('location:product.php');
             } else {
-                $_SESSION['response'] = "Lỗi khi tải ảnh lên.";
+                $_SESSION['response'] = "Error uploading image.";
                 $_SESSION['res_type'] = "danger";
             }
         } else {
-            $_SESSION['response'] = "Chỉ các file ảnh JPG, JPEG, PNG, GIF mới được phép tải lên.";
+            $_SESSION['response'] = "Only JPG, JPEG, PNG, GIF image files are allowed to be uploaded.";
             $_SESSION['res_type'] = "danger";
         }
     } else {
-        $_SESSION['response'] = "Vui lòng chọn một ảnh để tải lên.";
+        $_SESSION['response'] = "Please select a photo to upload.";
         $_SESSION['res_type'] = "danger";
     }
 }
@@ -56,7 +56,7 @@ if (isset($_GET['delete'])) {
     $stmt->bind_param("i", $id);
     $stmt->execute();
     header('location:product.php');
-    $_SESSION['response'] = "Sản phẩm đã được xóa thành công!";
+    $_SESSION['response'] = "Product has been deleted successfully!";
     $_SESSION['res_type'] = "danger";
 }
 
@@ -99,13 +99,13 @@ if (isset($_POST['update'])) {
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                 $image = "./assets/products/" . $image_name;
             } else {
-                $_SESSION['response'] = "Lỗi khi tải ảnh lên.";
+                $_SESSION['response'] = "Error uploading image.";
                 $_SESSION['res_type'] = "danger";
                 header('location:product.php');
                 exit();
             }
         } else {
-            $_SESSION['response'] = "Chỉ các file ảnh JPG, JPEG, PNG, GIF mới được phép tải lên.";
+            $_SESSION['response'] = "Only JPG, JPEG, PNG, GIF image files are allowed to be uploaded.";
             $_SESSION['res_type'] = "danger";
             header('location:product.php');
             exit();
@@ -117,7 +117,7 @@ if (isset($_POST['update'])) {
     $stmt->bind_param("sssssi", $brand, $name, $price, $image, $date, $id);
     $stmt->execute();
     
-    $_SESSION['response'] = "Sản phẩm đã được cập nhật thành công!";
+    $_SESSION['response'] = "Product has been updated successfully!";
     $_SESSION['res_type'] = "primary";
     header('location:product.php');
 }
