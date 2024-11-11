@@ -38,10 +38,10 @@
           <a class="nav-link" href="product.php">Product</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">CartProduct</a>
+        <a class="nav-link" href="cart.php">Cart Product</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="about.php">About</a>
         </li>
       </ul>
     </div>
