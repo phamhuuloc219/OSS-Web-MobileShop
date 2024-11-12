@@ -6,19 +6,23 @@ ob_start();
 <?php
     
     /*  include banner area  */
-    include ('Template/_banner-area.php');
+    include ('template/_banner-area.php');
     /*  include banner area  */
 
     /*  include top sale section */
-    include ('Template/_top-sale.php');
+    include ('template/_top-sale.php');
     /*  include top sale section */
 
+    /*  include special price section  */
+    include ('template/_special-price.php');
+    /*  include special price section  */
+
     /*  include banner ads  */
-    include ('Template/_banner-ads.php');
+    include ('template/_banner-ads.php');
     /*  include banner ads  */
 
     /*  include blog area  */
-    include ('Template/_blogs.php');
+    include ('template/_blogs.php');
     /*  include blog area  */
 
 ?>
