@@ -4,8 +4,8 @@ ob_start();
 ?>
 
 <?php 
-    /*  include banner area  *//*  include banner area  */
       include ('template/_banner-area.php');
+      include ('template/_banner-ads.php');
 
     echo "<h1>body here</h1>";
 
