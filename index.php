@@ -3,10 +3,23 @@ ob_start();
     include 'header.php';
 ?>
 
-<?php 
-      include ('template/_banner-area.php');
-      include ('template/_banner-ads.php');
-      include ('template/_blogs.php');
+<?php
+    
+    /*  include banner area  */
+    include ('Template/_banner-area.php');
+    /*  include banner area  */
+
+    /*  include top sale section */
+    include ('Template/_top-sale.php');
+    /*  include top sale section */
+
+    /*  include banner ads  */
+    include ('Template/_banner-ads.php');
+    /*  include banner ads  */
+
+    /*  include blog area  */
+    include ('Template/_blogs.php');
+    /*  include blog area  */
 
 ?>
 
