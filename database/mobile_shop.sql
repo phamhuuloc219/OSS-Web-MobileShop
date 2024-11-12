@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2024 at 04:21 PM
+-- Generation Time: Nov 12, 2024 at 05:48 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -54,8 +54,13 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`item_id`, `item_brand`, `item_name`, `item_price`, `item_image`, `item_register`) VALUES
 (3, 'Xiaomi', 'Xiaomi 14T', 25990000.00, './assets/products/xiaomi_14t.png', '2024-11-09 00:00:00'),
-(14, 'Xiaomi', 'Xiaomi 14 Ultra', 26999000.00, './assets/products/xiaomi-14-ultra.png', '2024-11-10 00:00:00');
-
+(14, 'Xiaomi', 'Xiaomi 14 Ultra', 26999000.00, './assets/products/xiaomi-14-ultra.png', '2024-11-10 00:00:00'),
+(16, 'NOKIA', 'Nokia 220 4G', 990000.00, './assets/products/nokia-220-4g-den-3.jpg', '2024-11-12 00:00:00'),
+(23, 'Iphone', 'Iphone 16 Pro Max 256GB', 34590000.00, './assets/products/iphone_16_pro_max_desert_titan.png', '2024-11-12 00:00:00'),
+(24, 'Samsung', 'Samsung Galaxy S24 FE 5G 128GB', 16990000.00, './assets/products/samssung_galaxy_s24_fe_xanh.png', '2024-11-12 00:00:00'),
+(25, 'OPPO', 'OPPO A3 6GB 128GB', 4990000.00, './assets/products/oppo_a3_den.jpg', '2024-11-12 00:00:00'),
+(26, 'Samsung', 'Samsung Galaxy Z Fold6 5G 256GB', 41990000.00, './assets/products/samsung_galaxy_z_fold6_gray.png', '2024-11-12 00:00:00'),
+(27, 'Masstel', 'Masstel Izi 16 4G', 450000.00, './assets/products/izi_16_den_4_c4e5c70fe5.jpg', '2024-11-12 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -75,7 +80,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'phloc2193', 'phamhuuloc219@gmail.com', '0376282119loc');
+(6, 'loc', 'loc@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
+(7, 'Thanh Tiền', 'thanhtien@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909');
 
 -- --------------------------------------------------------
 
@@ -105,7 +111,6 @@ ALTER TABLE `cart`
 ALTER TABLE `product`
   ADD PRIMARY KEY (`item_id`);
 
-
 --
 -- Indexes for table `users`
 --
@@ -120,20 +125,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
