@@ -5,7 +5,7 @@
         <h4 class="font-rubik font-size-20">Latest Blogs</h4>
         <hr>
 
-        <div class="owl-carousell owl-theme">
+        <div class="owl-carousel owl-theme">
             <div class="item">
                 <div class="card border-0 font-rale mr-5" style="width: 18rem;">
                     <h5 class="card-title font-size-16">Upcoming Mobiles</h5>

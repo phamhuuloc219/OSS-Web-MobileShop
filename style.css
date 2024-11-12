@@ -99,3 +99,23 @@ button, button:focus {
     margin-right: 1.2rem;
     margin-top: 1rem;
 }
+
+/* Đảm bảo bố cục của .owl-carousell nằm ngang */
+#blogs .owl-carousel {
+    display: flex;
+    flex-direction: row; /* Sắp xếp các phần tử theo hàng ngang */
+    justify-content: space-between; /* Căn đều các item */
+}
+
+/* Đảm bảo các thẻ .item không bị giới hạn về chiều rộng */
+#blogs .item {
+    flex: 1;
+    max-width: 100%; /* Đảm bảo item không bị giới hạn chiều rộng */
+    margin-right: 1rem; /* Khoảng cách giữa các thẻ item */
+}
+
+/* Xóa khoảng cách cuối cùng */
+#blogs .item:last-child {
+    margin-right: 0;
+}
+

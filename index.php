@@ -8,8 +8,6 @@ ob_start();
       include ('template/_banner-ads.php');
       include ('template/_blogs.php');
 
-    echo "<h1>body here</h1>";
-
 ?>
 
 <?php
