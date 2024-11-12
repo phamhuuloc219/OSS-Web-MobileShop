@@ -6,6 +6,7 @@ ob_start();
 <?php 
       include ('template/_banner-area.php');
       include ('template/_banner-ads.php');
+      include ('template/_blogs.php');
 
     echo "<h1>body here</h1>";
 
