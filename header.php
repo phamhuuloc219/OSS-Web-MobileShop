@@ -77,7 +77,7 @@ if (!isset($_SESSION['username'])) {
           margin-left: 100px;
           margin-top: 1px;
           position: relative;
-          width: 200px;
+          width: 300px;
           height: 40px;
            /* Viền ngoài */
           border-radius: 25px;
@@ -93,10 +93,10 @@ if (!isset($_SESSION['username'])) {
 
         .search input {
             border: none; /* Loại bỏ viền của input */
-            width: 100%;
-            height: 100%;
+            width: 250px;
+            height: 35px;
             border-radius: 30px;
-            padding: 0 10px; /* Padding nhỏ để khớp với viền ngoài */
+            padding: 5px 5px; /* Padding nhỏ để khớp với viền ngoài */
             box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
         }
 
@@ -163,8 +163,6 @@ if (!isset($_SESSION['username'])) {
                           <tr>
                               <td>
                                   <input type="text" placeholder="Search here" name="query" id="">
-                              </td>
-                              <td>
                                   <button type="submit" style="background: none; border: none; padding: 0; margin-left: 5px;">
                                       <i class="bx bx-search" style="color: black;"></i>
                                   </button>
