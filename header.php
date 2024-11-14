@@ -10,6 +10,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mobile Shope</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Bootstrap CDN -->
     <link
@@ -47,6 +48,66 @@ if (!isset($_SESSION['username'])) {
     <?php
     include 'functions.php';
     ?>
+    <style>
+      
+        #header {
+          position: fixed;  
+          top: 0;           
+          left: 0;          
+          width: 100%;      
+          z-index: 1000;    
+          background-color: #fff; 
+          box-shadow: 0 4px 2px -2px gray; 
+        }
+
+        
+        #main-site {
+          margin-top: 80px; 
+        }
+
+        
+        .search {
+          margin-left: 100px;
+          margin-top: 1px;
+          position: relative;
+          width: 200px;
+          height: 40px;
+           /* Viền ngoài */
+          border-radius: 25px;
+          padding: 0px 20px;
+          padding-right: 0px;
+          background-color: white; /* Màu nền của container */
+      }
+
+        .search-item {
+            width: 100%;
+            height: 100%;
+        }
+
+        .search input {
+            border: none; /* Loại bỏ viền của input */
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            padding: 0 10px; /* Padding nhỏ để khớp với viền ngoài */
+            box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+        }
+
+        .search input:focus {
+            outline: none; /* Loại bỏ outline khi focus */
+        }
+        td a {
+          color:black;
+          padding-right: 10px; /* Thêm khoảng cách xung quanh icon */
+          
+      }
+
+
+        
+      
+
+
+    </style>
   </head>
   <body>
     <!-- start #header -->
@@ -66,8 +127,7 @@ if (!isset($_SESSION['username'])) {
       <!-- Primary Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
 
-      <a class="navbar-brand" href="index.php">Mobile Shop</a>
-  
+      <a class="navbar-brand" href="index.php"><img src="assets/logo.png" alt="Logo"  style="width: 70px; height: auto;"> Mobile Shop</a>
     
         <button
           class="navbar-toggler"
@@ -114,6 +174,25 @@ if (!isset($_SESSION['username'])) {
             <li class="nav-item">
               <a class="nav-link" href="#">Coming Soon</a>
             </li>
+            <li>
+              <div class="search">
+                  <form action="search.php" method="POST">
+                      <table class="search-item">
+                          <tr>
+                              <td>
+                                  <input type="text" placeholder="Search here" name="query" id="">
+                              </td>
+                              <td>
+                                  <button type="submit" style="background: none; border: none; padding: 0; margin-left: 5px;">
+                                      <i class="bx bx-search" style="color: black;"></i>
+                                  </button>
+                              </td>
+                          </tr>
+                      </table>
+                  </form>
+              </div>
+          </li>
+
           </ul>
           <form action="#" class="font-size-14 font-rubik">
                 <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
