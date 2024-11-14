@@ -20,6 +20,10 @@ ob_start();
     /*  include banner ads  */
     include ('template/_banner-ads.php');
     /*  include banner ads  */
+    
+    /*  include new phones section  */
+    include ('template/_new-phones.php');
+    /*  include new phones section  */
 
     /*  include blog area  */
     include ('template/_blogs.php');

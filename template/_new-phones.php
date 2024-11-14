@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 ?>
 <section id="top-sale">
     <div class="container py-5">
-        <h4 class="font-rubik font-size-20">Top Sale</h4>
+        <h4 class="font-rubik font-size-20">New Phones</h4>
         <hr>
         <!-- owl carousel -->
         <div class="owl-carousel owl-theme">

@@ -16,15 +16,15 @@
                                 </div>
                      
                                 <div class="col">
-                                <?php
-                            //!Hàm in_array() trong php dùng để kiểm tra giá trị nào đó có tồn tại trong mảng hay không.
-                            //! Nếu như tồn tại thì nó sẽ trả về TRUE và ngược lại sẽ trả về FALSE 
-                            if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
-                                echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control">In the Cart</button>';
-                            }else{
-                                echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-16 form-control">Add to Cart</button>';
-                            }
-                            ?>
+                                    <?php
+                                    //!Hàm in_array() trong php dùng để kiểm tra giá trị nào đó có tồn tại trong mảng hay không.
+                                    //! Nếu như tồn tại thì nó sẽ trả về TRUE và ngược lại sẽ trả về FALSE 
+                                    if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
+                                        echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control">In the Cart</button>';
+                                    }else{
+                                        echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-16 form-control">Add to Cart</button>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                                 <table class="my-3">
                                     <tr class="font-rubik font-size-14">
                                         <td>M.R.P:</td>
-                                        <td><strike>$162.00</strike></td>
+                                        <td><strike>$<span><?php echo $item['item_price']+1000000 ?? 0; ?></span></strike></td>
                                     </tr>
                                     <tr class="font-rubik font-size-14">
                                         <td>Deal Price:</td>
@@ -55,7 +55,7 @@
                                     </tr>
                                     <tr class="font-rubik font-size-14">
                                         <td>You Save:</td>
-                                        <td><span class="font-size-16 text-danger">$152.00</span></td>
+                                        <td><span class="font-size-16 text-danger">$1000000</span></td>
                                     </tr>
                                 </table>
                             <!---    !product price       -->

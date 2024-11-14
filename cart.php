@@ -15,7 +15,10 @@
       /*  include top sale section */
       count($product->getData('wishlist')) ? include ('template/_wishilist_template.php') :  include ('template/notFound/_wishlist_notFound.php');
       /*  include top sale section */
-
+      
+    /*  include top sale section */
+    include ('Template/_new-phones.php');
+    /*  include top sale section */
 ?>
 
 <?php
