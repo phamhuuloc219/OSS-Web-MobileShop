@@ -41,13 +41,13 @@
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="far fa-star"></i></span>
                             </div>
-                            <a href="#" class="px-2 font-rale font-size-14">20,534 ratings</a>
+                            <a href="#" class="px-2 font-rubik font-size-14">20,534 ratings</a>
                         </div>
                         <!--  !product rating-->
 
                         <!-- product qty -->
                         <div class="qty d-flex pt-2">
-                            <div class="d-flex font-rale w-25">
+                            <div class="d-flex font-rubik w-25">
                                 <button class="qty-up border bg-light" data-id="<?php echo $item['item_id'] ?? '0'; ?>"><i class="fas fa-angle-up"></i></button>
                                 <input type="text" data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty_input border px-2 w-100 bg-light" disabled value="1" placeholder="1">
                                 <button data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
@@ -85,7 +85,7 @@
             <!-- subtotal section-->
             <div class="col-sm-3">
                 <div class="sub-total border text-center mt-2">
-                    <h6 class="font-size-12 font-rale text-success py-3"><i class="fas fa-check"></i> Your order is eligible for FREE Delivery.</h6>
+                    <h6 class="font-size-12 font-rubik text-success py-3"><i class="fas fa-check"></i> Your order is eligible for FREE Delivery.</h6>
                     <div class="border-top py-4">
                         <h5 class="font-baloo font-size-20">Subtotal ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> item):&nbsp; <span class="text-danger">$<span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span> </span> </h5>
                         <button type="submit" class="btn btn-warning mt-3">Proceed to Buy</button>

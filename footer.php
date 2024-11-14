@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-lg-3 col-12">
             <h4 class="font-rubik font-size-20">Mobile Shop</h4>
-            <p class="font-size-14 font-rale text-white-50">
+            <p class="font-size-14 font-rubik text-white-50">
               Please give me a call when you feel difficult or have questions
             </p>
           </div>
@@ -29,25 +29,25 @@
             <div class="d-flex flex-column flex-wrap">
               <a
                 href="https://phamhuuloc219.github.io"
-                class="font-rale font-size-14 text-white-50 pb-1"
+                class="font-rubik font-size-14 text-white-50 pb-1"
                 target="_blank"
                 >About Us</a
               >
               <a
                 href="https://phamhuuloc219.github.io"
-                class="font-rale font-size-14 text-white-50 pb-1"
+                class="font-rubik font-size-14 text-white-50 pb-1"
                 target="_blank"
                 >Delivery Information</a
               >
               <a
                 href="https://phamhuuloc219.github.io"
-                class="font-rale font-size-14 text-white-50 pb-1"
+                class="font-rubik font-size-14 text-white-50 pb-1"
                 target="_blank"
                 >Privacy Policy</a
               >
               <a
                 href="https://phamhuuloc219.github.io"
-                class="font-rale font-size-14 text-white-50 pb-1"
+                class="font-rubik font-size-14 text-white-50 pb-1"
                 target="_blank"
                 >Terms & Conditions</a
               >
@@ -58,25 +58,25 @@
             <div class="d-flex flex-column flex-wrap">
               <a
                 href="https://phamhuuloc219.github.io"
-                class="font-rale font-size-14 text-white-50 pb-1"
+                class="font-rubik font-size-14 text-white-50 pb-1"
                 target="_blank"
                 >Profile Forme</a
               >
               <a
                 href="mailto:phamhuuloc2192003@gmail.com"
-                class="font-rale font-size-14 text-white-50 pb-1"
+                class="font-rubik font-size-14 text-white-50 pb-1"
                 target="_blank"
                 >Email</a
               >
               <a
                 href="tel:0376282119"
-                class="font-rale font-size-14 text-white-50 pb-1"
+                class="font-rubik font-size-14 text-white-50 pb-1"
                 target="_blank"
                 >Phone</a
               >
               <a
                 href="https://www.instagram.com/21st_coluuhmahp_sep/"
-                class="font-rale font-size-14 text-white-50 pb-1"
+                class="font-rubik font-size-14 text-white-50 pb-1"
                 target="_blank"
                 >Instagram</a
               >
@@ -86,7 +86,7 @@
       </div>
     </footer>
     <div class="copyright text-center bg-dark text-white py-2">
-      <p class="font-rale font-size-14">
+      <p class="font-rubik font-size-14">
         &copy; Copyrights 2024. Designer PHL
         <a
           href="https://profile-forme.surge.sh/"

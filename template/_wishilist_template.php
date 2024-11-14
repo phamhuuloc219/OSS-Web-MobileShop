@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         <span><i class="fas fa-star"></i></span>
                                         <span><i class="far fa-star"></i></span>
                                     </div>
-                                    <a href="#" class="px-2 font-rale font-size-14">20,534 ratings</a>
+                                    <a href="#" class="px-2 font-rubik font-size-14">20,534 ratings</a>
                                 </div>
                                 <!--  !product rating-->
 

@@ -52,11 +52,11 @@ if (!isset($_SESSION['username'])) {
     <!-- start #header -->
     <header id="header">
       <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
-        <p class="font-rale font-size-12 text-black-50 m-0">
+        <p class="font-rubik font-size-12 text-black-50 m-0">
           Phạm Hữu Lộc Cửu lợi 2, Cam Hòa,Cam Lâm,Khánh
           Hòa,SĐt:0376282119
         </p>
-        <div class="font-rale font-size-14">
+        <div class="font-rubik font-size-14">
           <a href="login/logout.php" class="px-3 border-right border-left text-dark"><i class="fas fa-sign-out-alt"></i> Logout</a>
           <a href="#" class="px-3 border-right text-dark"><i class="fas fa-user"></i> <?php echo "" . $_SESSION['username'] . ""; ?></a>
          
@@ -85,8 +85,18 @@ if (!isset($_SESSION['username'])) {
             <li class="nav-item active">
               <a class="nav-link" href="#">On Sale</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Category</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Category
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Iphone</a>
+                  <a class="dropdown-item" href="#">Masstel</a>
+                  <a class="dropdown-item" href="#">NOKIA</a>
+                  <a class="dropdown-item" href="#">Oppo</a>
+                  <a class="dropdown-item" href="#">Samsung</a>
+                  <a class="dropdown-item" href="#">Xiaomi</a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"
@@ -105,7 +115,7 @@ if (!isset($_SESSION['username'])) {
               <a class="nav-link" href="#">Coming Soon</a>
             </li>
           </ul>
-          <form action="#" class="font-size-14 font-rale">
+          <form action="#" class="font-size-14 font-rubik">
                 <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
                     <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
                     <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
