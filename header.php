@@ -41,12 +41,19 @@ if (!isset($_SESSION['username'])) {
       integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
       crossorigin="anonymous"
     />
+    <!-- jQuery and Popper.js (required for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-CSfhmgPniwgp4glwIeG1iI/4wDfSYsAKHQ0RmCEbWQ2k5qKDEBykgHl/O8o+S27Y" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-q6E9RHvbIyZFJoft+2mJbHaEWldHsOKw3d4iV6i67aIeA9H/7UFyClzivvzjGS5g" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7jw3g1R6OWpme1RWQq8l1T6azV/nE4S9qGZIVg1wKQ7ezXQ" crossorigin="anonymous"></script>
+
 
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="style.css" />
 
     <?php
-    include 'functions.php';
+      include 'functions.php';
     ?>
     <style>
       
@@ -101,28 +108,13 @@ if (!isset($_SESSION['username'])) {
           padding-right: 10px; /* Thêm khoảng cách xung quanh icon */
           
       }
-
-
-        
-      
-
-
     </style>
+
   </head>
+
   <body>
     <!-- start #header -->
     <header id="header">
-      <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
-        <p class="font-rubik font-size-12 text-black-50 m-0">
-          Phạm Hữu Lộc Cửu lợi 2, Cam Hòa,Cam Lâm,Khánh
-          Hòa,SĐt:0376282119
-        </p>
-        <div class="font-rubik font-size-14">
-          <a href="login/logout.php" class="px-3 border-right border-left text-dark"><i class="fas fa-sign-out-alt"></i> Logout</a>
-          <a href="#" class="px-3 border-right text-dark"><i class="fas fa-user"></i> <?php echo "" . $_SESSION['username'] . ""; ?></a>
-         
-        </div>
-      </div>
 
       <!-- Primary Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
@@ -159,17 +151,7 @@ if (!isset($_SESSION['username'])) {
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
-                >Products <i class="fas fa-chevron-down"></i
-              ></a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                >Category <i class="fas fa-chevron-down"></i
-              ></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Coming Soon</a>
@@ -199,9 +181,31 @@ if (!isset($_SESSION['username'])) {
                     <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
                     <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
                 </a>
-            </form>
+          </form>
+
+          <div class="font-rubik font-size-14">
+            <!-- Button to toggle dropdown -->
+            <a href="#" class="px-3 text-dark dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> <?php echo $_SESSION['username']; ?>
+            </a>
+
+            <!-- Dropdown menu with right alignment -->
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">Thông tin cá nhân</a>
+              <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </div>
+          </div>
+
         </div>
       </nav>
+
+      <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
+        <p class="font-rubik font-size-12 text-black-50 m-0">
+          <img src="https://cdn2.fptshop.com.vn/unsafe/64x0/filters:quality(100)/black_friday_000169f9af.png" alt="black-friday" width="20px">
+        <b style="color: red;">Black Friday trúng iPhone 16 Pro Max</b>
+        </p>        
+      </div>
+
       <!-- !Primary Navigation -->
     </header>
     <!-- !start #header -->
