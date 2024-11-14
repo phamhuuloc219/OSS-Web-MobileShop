@@ -127,7 +127,7 @@ if (!isset($_SESSION['username'])) {
       <!-- Primary Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
 
-      <a class="navbar-brand" href="index.php"><img src="assets/logo.png" alt="Logo"  style="width: 70px; height: auto;"> Mobile Shop</a>
+      <a class="navbar-brand" href="index.php"><img src="assets/logo.png" alt="Logo"  style="width: 50px; height: 30px;"> Mobile Shop</a>
     
         <button
           class="navbar-toggler"
