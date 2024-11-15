@@ -4,7 +4,7 @@ shuffle($product_shuffle);
 
 // request method post
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-    if (isset($_POST['top_sale_submit'])){
+    if (isset($_POST['new_phone_submit'])){
         // call method addToCart
         $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
     }
@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                             if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
                                 echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
                             }else{
-                                echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
+                                echo '<button type="submit" name="new_phone_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
                             }
                             ?>
                            

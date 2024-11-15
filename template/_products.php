@@ -1,4 +1,7 @@
 <?php
+        if (isset($_POST['product_submit'])) {
+            $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
+        }
     $item_id = $_GET['item_id'] ?? 1;
     foreach ($product->getData() as $item) :
         if ($item['item_id'] == $item_id) :
@@ -16,15 +19,17 @@
                                 </div>
                      
                                 <div class="col">
-                                    <?php
-                                    //!Hàm in_array() trong php dùng để kiểm tra giá trị nào đó có tồn tại trong mảng hay không.
-                                    //! Nếu như tồn tại thì nó sẽ trả về TRUE và ngược lại sẽ trả về FALSE 
-                                    if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
-                                        echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control">In the Cart</button>';
-                                    }else{
-                                        echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-16 form-control">Add to Cart</button>';
-                                    }
-                                    ?>
+                                    <form method="post">
+                                        <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
+                                        <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                                        <?php
+                                        if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
+                                            echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
+                                        }else{
+                                            echo '<button type="submit" name="product_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
+                                        }
+                                        ?>
+                                    </form>
                                 </div>
                             </div>
                         </div>

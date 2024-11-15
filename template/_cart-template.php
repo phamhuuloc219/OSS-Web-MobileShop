@@ -9,6 +9,11 @@
         if (isset($_POST['wishlist-submit'])){
             $Cart->saveForLater($_POST['item_id']);
         }
+
+        // clear cart
+        if (isset($_POST['clear-cart-submit'])){
+            $Cart->clearCart();
+        }
     }
 ?>
 
@@ -27,7 +32,7 @@
                 <!-- cart item -->
                 <div class="row border-top py-3 mt-3">
                     <div class="col-sm-2">
-                        <img src="<?php echo $item['item_image'] ?? "./assets/products/1.png" ?>" style="height: 120px;" alt="cart1" class="img-fluid">
+                        <img src="<?php echo $item['item_image'] ?? "./assets/products/xiaomi_14t.png" ?>" style="height: 120px;" alt="cart1" class="img-fluid">
                     </div>
                     <div class="col-sm-8">
                         <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
@@ -93,8 +98,32 @@
                 </div>
             </div>
             <!-- !subtotal section-->
+             <div>
+                <form method="post">
+                    <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
+                    <button type="submit" name="clear-cart-submit" class="btn btn-clear-cart font-baloo px-3 border-right border-left">Clear Cart</button>
+                </form>
+                </div>
         </div>
         <!--  !shopping cart items   -->
     </div>
 </section>
 <!-- !Shopping cart section  -->
+<style>
+    .btn-clear-cart {
+        padding: 5px 15px;
+        border: 1px solid #dc3545;
+        background-color: #dc3545;
+        color: white;
+        font-family: 'Baloo', sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn-clear-cart:hover {
+        background-color: #c82333;
+    }
+</style>

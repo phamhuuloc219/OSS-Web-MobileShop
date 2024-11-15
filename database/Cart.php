@@ -65,6 +65,16 @@ class Cart
                 return $result;
             }
         }
+
+        // Clear all items from the cart
+        public function clearCart($table = 'cart'){
+            $result = $this->db->con->query("DELETE FROM {$table}");
+            if($result){
+                header("Location:" . $_SERVER['PHP_SELF']);
+            }
+            return $result;
+        }
+        
         // delete cart item using Wishlist item id
         public function deleteWishlist($item_id = null, $table = 'wishlist'){
             if($item_id != null){
