@@ -135,7 +135,7 @@ if (!isset($_SESSION['username'])) {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav m-auto font-rubik">
             <li class="nav-item active">
-              <a class="nav-link" href="#">On Sale</a>
+              <a class="nav-link" href="index.php">On Sale</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -157,20 +157,20 @@ if (!isset($_SESSION['username'])) {
               <a class="nav-link" href="#">Coming Soon</a>
             </li>
             <li>
-              <div class="search">
-                  <form action="search.php" method="POST">
-                      <table class="search-item">
-                          <tr>
-                              <td>
-                                  <input type="text" placeholder="Search here" name="query" id="">
-                                  <button type="submit" style="background: none; border: none; padding: 0; margin-left: 5px;">
-                                      <i class="bx bx-search" style="color: black;"></i>
-                                  </button>
-                              </td>
-                          </tr>
-                      </table>
-                  </form>
-              </div>
+            <div class="search">
+              <form action="search.php" method="POST">
+                  <table class="search-item">
+                      <tr>
+                          <td>
+                              <input type="text" placeholder="Search here" name="query" id="">
+                              <button type="search-submit" style="background: none; border: none; padding: 0; margin-left: 5px;">
+                                  <i class="bx bx-search" style="color: black;"></i>
+                              </button>
+                          </td>
+                      </tr>
+                  </table>
+              </form>
+          </div>
           </li>
 
           </ul>

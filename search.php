@@ -4,7 +4,7 @@ ob_start();
 ?>
 
 <?php 
-    include '_searchProduct.php';
+    include 'template/_searchProduct.php';
 ?>
 
 <?php
