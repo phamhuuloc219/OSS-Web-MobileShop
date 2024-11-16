@@ -35,21 +35,18 @@
     <!-- Navbar links -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="product.php">Product</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
         <a class="nav-link" href="cart.php">Cart Product</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="about.php">About</a>
         </li>
       </ul>
     </div>
-    <form class="form-inline" action="/action_page.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-primary" type="submit">Search</button>
-    </form>
+    <!--admin logout and account-->
   </nav>
   <div class="container-fluid">
     <div class="row justify-content-center">
