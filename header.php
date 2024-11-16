@@ -16,38 +16,32 @@ if (!isset($_SESSION['username'])) {
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
     />
 
     <!-- Owl-carousel CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw="
-      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-      integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw="
-      crossorigin="anonymous"
     />
 
     <!-- font awesome icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
-      crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>  
     <!-- jQuery and Popper.js (required for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-CSfhmgPniwgp4glwIeG1iI/4wDfSYsAKHQ0RmCEbWQ2k5qKDEBykgHl/O8o+S27Y" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-q6E9RHvbIyZFJoft+2mJbHaEWldHsOKw3d4iV6i67aIeA9H/7UFyClzivvzjGS5g" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7jw3g1R6OWpme1RWQq8l1T6azV/nE4S9qGZIVg1wKQ7ezXQ" crossorigin="anonymous"></script>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="style.css" />
@@ -56,7 +50,6 @@ if (!isset($_SESSION['username'])) {
       include 'functions.php';
     ?>
     <style>
-      
         #header {
           position: fixed;  
           top: 0;           
@@ -67,24 +60,21 @@ if (!isset($_SESSION['username'])) {
           box-shadow: 0 4px 2px -2px gray; 
         }
 
-        
         #main-site {
           margin-top: 80px; 
         }
 
-        
         .search {
           margin-left: 100px;
           margin-top: 1px;
           position: relative;
           width: 300px;
           height: 40px;
-           /* Viền ngoài */
           border-radius: 25px;
           padding: 0px 20px;
           padding-right: 0px;
-          background-color: white; /* Màu nền của container */
-      }
+          background-color: white;
+        }
 
         .search-item {
             width: 100%;
@@ -92,22 +82,22 @@ if (!isset($_SESSION['username'])) {
         }
 
         .search input {
-            border: none; /* Loại bỏ viền của input */
+            border: none;
             width: 250px;
             height: 35px;
             border-radius: 30px;
-            padding: 5px 5px; /* Padding nhỏ để khớp với viền ngoài */
-            box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+            padding: 5px 5px;
+            box-sizing: border-box;
         }
 
         .search input:focus {
-            outline: none; /* Loại bỏ outline khi focus */
+            outline: none;
         }
+
         td a {
           color:black;
-          padding-right: 10px; /* Thêm khoảng cách xung quanh icon */
-          
-      }
+          padding-right: 10px;
+        }
     </style>
 
   </head>
@@ -119,7 +109,7 @@ if (!isset($_SESSION['username'])) {
       <!-- Primary Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
 
-      <a class="navbar-brand" href="index.php"><img src="assets/logo.png" alt="Logo"  style="width: 50px; height: 30px;"> Mobile Shop</a>
+        <a class="navbar-brand" href="index.php"><img src="assets/logo.png" alt="Logo" style="width: 50px; height: 30px;"> Mobile Shop</a>
     
         <button
           class="navbar-toggler"
@@ -129,7 +119,7 @@ if (!isset($_SESSION['username'])) {
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        >
+          >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -137,7 +127,7 @@ if (!isset($_SESSION['username'])) {
             <li class="nav-item active">
               <a class="nav-link" href="index.php">On Sale</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Category
               </a>
@@ -150,29 +140,28 @@ if (!isset($_SESSION['username'])) {
                   <a class="dropdown-item" href="#">Xiaomi</a>
               </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="blog.php">Blog</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="#">Coming Soon</a>
             </li>
             <li>
-            <div class="search">
-              <form action="search.php" method="POST">
+              <div class="search">
+                <form action="search.php" method="POST">
                   <table class="search-item">
-                      <tr>
-                          <td>
-                              <input type="text" placeholder="Search here" name="query" id="">
-                              <button type="search-submit" style="background: none; border: none; padding: 0; margin-left: 5px;">
-                                  <i class="bx bx-search" style="color: black;"></i>
-                              </button>
-                          </td>
-                      </tr>
+                    <tr>
+                      <td>
+                        <input type="text" placeholder="Search here" name="query" id="">
+                        <button type="search-submit" style="background: none; border: none; padding: 0; margin-left: 5px;">
+                          <i class="bx bx-search" style="color: black;"></i>
+                        </button>
+                      </td>
+                    </tr>
                   </table>
-              </form>
-          </div>
-          </li>
-
+                </form>
+              </div>
+            </li>
           </ul>
           <form action="#" class="font-size-14 font-rubik">
                 <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
@@ -182,12 +171,9 @@ if (!isset($_SESSION['username'])) {
           </form>
 
           <div class="font-rubik font-size-14">
-            <!-- Button to toggle dropdown -->
             <a href="#" class="px-3 text-dark dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user"></i> <?php echo $_SESSION['username']; ?>
             </a>
-
-            <!-- Dropdown menu with right alignment -->
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
               <a class="dropdown-item" href="#">Thông tin cá nhân</a>
               <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
@@ -203,10 +189,15 @@ if (!isset($_SESSION['username'])) {
         <b style="color: red;">Black Friday trúng iPhone 16 Pro Max</b>
         </p>        
       </div>
-
       <!-- !Primary Navigation -->
     </header>
     <!-- !start #header -->
 
     <!-- start #main-site -->
     <main id="main-site">
+      <!-- Content here -->
+    </main>
+    <!-- !start #main-site -->
+
+  </body>
+</html>
