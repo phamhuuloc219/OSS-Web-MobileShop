@@ -1,49 +1,112 @@
 <?php 
-
 include 'config.php';
-
 error_reporting(0);
-
 session_start();
 
 if (isset($_SESSION['username'])) {
     header("Location: index.php");
+    exit();
 }
 
-if (isset($_POST['submit'])) {
-	$username = $_POST['username'];
-	$email = $_POST['email'];
-	$password = md5($_POST['password']);
-	$cpassword = md5($_POST['cpassword']);
-
-	if ($password == $cpassword) {
-		$sql = "SELECT * FROM users WHERE email='$email'";
-		$result = mysqli_query($conn, $sql);
-		if (!$result->num_rows > 0) {
-			$sql = "INSERT INTO users (username, email, password)
-					VALUES ('$username', '$email', '$password')";
-			$result = mysqli_query($conn, $sql);
-			if ($result) {
-				echo "<script>alert('Wow! Đăng ký người dùng đã hoàn thành.')</script>";
-				header("location:index.php");
-				$username = "";
-				$email = "";
-				$_POST['password'] = "";
-				$_POST['cpassword'] = "";
-			} else {
-				echo "<script>alert('Rất tiếc! Đã xảy ra sai sót gì đó.')</script>";
-			
-			}
-		} else {
-			echo "<script>alert('Rất tiếc! Email đã tồn tại.')</script>";
-		}
-		
-	} else {
-		echo "<script>alert('Mật khẩu không khớp.')</script>";
-	}
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    registerUser();
 }
 
+function registerUser() {
+    global $conn;
+
+    $username = trim($_POST['username']);
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+    $cpassword = trim($_POST['cpassword']);
+
+    if (!validateInput($username, $email, $password, $cpassword)) {
+        return;
+    }
+
+    $hashedPassword = md5($password);
+
+    if (emailExists($email)) {
+        alert("Rất tiếc! Email đã tồn tại.");
+        return;
+    }
+
+    if (insertUser($username, $email, $hashedPassword)) {
+        echo "<script>
+                alert('Wow! Đăng ký người dùng đã hoàn thành.');
+                window.location.href = 'index.php';
+              </script>";
+        exit();
+    } else {
+        alert("Rất tiếc! Đã xảy ra sai sót gì đó.");
+    }
+}
+
+function validateInput($username, $email, $password, $cpassword) {
+    if (empty($username) || empty($email) || empty($password) || empty($cpassword)) {
+        alert("Vui lòng điền vào tất cả các trường.");
+        return false;
+    }
+
+    if ($password !== $cpassword) {
+        alert("Mật khẩu không khớp.");
+        return false;
+    }
+
+    if (!validatePassword($password)) {
+        return false;
+    }
+
+    return true;
+}
+
+function validatePassword($password) {
+    if (strlen($password) < 8 || strlen($password) > 12) {
+        alert("Mật khẩu phải từ 8 đến 12 ký tự.");
+        return false;
+    }
+
+    if (!preg_match('/[A-Z]/', $password)) {
+        alert("Mật khẩu phải chứa ít nhất một chữ cái viết hoa.");
+        return false;
+    }
+
+    if (!preg_match('/[a-z]/', $password)) {
+        alert("Mật khẩu phải chứa ít nhất một chữ cái thường.");
+        return false;
+    }
+
+    if (!preg_match('/[0-9]/', $password)) {
+        alert("Mật khẩu phải chứa ít nhất một chữ số.");
+        return false;
+    }
+
+    if (!preg_match('/[\W_]/', $password)) {
+        alert("Mật khẩu phải chứa ít nhất một ký tự đặc biệt.");
+        return false;
+    }
+
+    return true;
+}
+
+function emailExists($email) {
+    global $conn;
+    $sql = "SELECT * FROM users WHERE email='$email'";
+    $result = mysqli_query($conn, $sql);
+    return $result->num_rows > 0;
+}
+
+function insertUser($username, $email, $hashedPassword) {
+    global $conn;
+    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPassword')";
+    return mysqli_query($conn, $sql);
+}
+
+function alert($msg) {
+    echo "<script>alert('$msg')</script>";
+}
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -61,16 +124,16 @@ if (isset($_POST['submit'])) {
 		<form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
 			<div class="input-group">
-				<input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
+				<input type="text" placeholder="Username" name="username" value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>" required>
 			</div>
 			<div class="input-group">
-				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
+				<input type="email" placeholder="Email" name="email" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" required>
 			</div>
 			<div class="input-group">
-				<input type="password" placeholder="Password" id="password" name="password" value="<?php echo $_POST['password']; ?>" required>
+				<input type="password" placeholder="Password" id="password" name="password" value="<?php echo isset($_POST['password']) ? htmlspecialchars($_POST['password']) : ''; ?>" required>
             </div>
             <div class="input-group">
-				<input type="password" placeholder="Confirm Password" id="cpassword" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
+				<input type="password" placeholder="Confirm Password" id="cpassword" name="cpassword" value="<?php echo isset($_POST['cpassword']) ? htmlspecialchars($_POST['cpassword']) : ''; ?>" required>
 			</div>
 			<div>
 				<input type="checkbox" id="showPasswordToggle" onclick="togglePasswordVisibility()"> 
