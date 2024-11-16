@@ -1,7 +1,23 @@
 <?php
+    error_reporting(0);
+    ini_set('log_errors', 1);
+    
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (isset($_POST['product_submit'])) {
-            $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
+            if (isset($_POST['user_id'], $_POST['item_id'])) {
+                $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
+            }
         }
+    
+        if (isset($_POST['product_proceed_submit'])) {
+            if (isset($_POST['user_id'], $_POST['item_id'])) {
+                $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
+                header("Location: cart.php");
+                exit();
+            }
+        }
+    }
+        
     $item_id = $_GET['item_id'] ?? 1;
     foreach ($product->getData() as $item) :
         if ($item['item_id'] == $item_id) :
@@ -15,7 +31,17 @@
                         <img src="<?php echo $item['item_image'] ?? "./assets/products/xiaomi_14t.png" ?>" alt="product" class="img-fluid">
                             <div class="form-row pt-4 font-size-16 font-baloo">
                                 <div class="col">
-                                    <button type="submit" class="btn btn-danger form-control">Proceed to Buy</button>
+                                    <form method="post">
+                                        <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
+                                        <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                                        <?php
+                                        if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
+                                            echo '<button type="submit" disable name="product_proceed_submit" class="btn btn-danger form-control" formaction="cart.php">Proceed to Buy</button>';
+                                        }else{
+                                            echo '<button type="submit" name="product_proceed_submit" class="btn btn-danger form-control" formaction="cart.php">Proceed to Buy</button>';
+                                        }
+                                        ?>
+                                    </form>
                                 </div>
                      
                                 <div class="col">
@@ -24,9 +50,9 @@
                                         <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                         <?php
                                         if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
-                                            echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
+                                            echo '<button type="submit" disabled class="btn btn-success form-control">In the Cart</button>';
                                         }else{
-                                            echo '<button type="submit" name="product_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
+                                            echo '<button type="submit" name="product_submit" class="btn btn-warning form-control">Add to Cart</button>';
                                         }
                                         ?>
                                     </form>
