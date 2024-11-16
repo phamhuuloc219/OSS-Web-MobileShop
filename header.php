@@ -132,12 +132,12 @@ if (!isset($_SESSION['username'])) {
                   Category
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Iphone</a>
-                  <a class="dropdown-item" href="#">Masstel</a>
-                  <a class="dropdown-item" href="#">NOKIA</a>
-                  <a class="dropdown-item" href="#">Oppo</a>
-                  <a class="dropdown-item" href="#">Samsung</a>
-                  <a class="dropdown-item" href="#">Xiaomi</a>
+                  <a class="dropdown-item" href="index.php#special-price">Iphone</a>
+                  <a class="dropdown-item" href="index.php#special-price">Masstel</a>
+                  <a class="dropdown-item" href="index.php#special-price">NOKIA</a>
+                  <a class="dropdown-item" href="index.php#special-price">Oppo</a>
+                  <a class="dropdown-item" href="index.php#special-price">Samsung</a>
+                  <a class="dropdown-item" href="index.php#special-price">Xiaomi</a>
               </div>
             </li>
             <li class="nav-item active">
