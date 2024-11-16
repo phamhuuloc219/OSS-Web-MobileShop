@@ -52,7 +52,6 @@ if (isset($_POST['submit'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>Register Form - Mobile Shop</title>
@@ -68,10 +67,14 @@ if (isset($_POST['submit'])) {
 				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
 			</div>
 			<div class="input-group">
-				<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
+				<input type="password" placeholder="Password" id="password" name="password" value="<?php echo $_POST['password']; ?>" required>
             </div>
             <div class="input-group">
-				<input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
+				<input type="password" placeholder="Confirm Password" id="cpassword" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
+			</div>
+			<div>
+				<input type="checkbox" id="showPasswordToggle" onclick="togglePasswordVisibility()"> 
+				<label for="showPasswordToggle">Show password</label>
 			</div>
 			<div class="input-group">
 				<button name="submit" class="btn">Register</button>
@@ -79,5 +82,15 @@ if (isset($_POST['submit'])) {
 			<p class="login-register-text">Have an account? <a href="index.php">Login Here</a>.</p>
 		</form>
 	</div>
+
+	<script>
+		function togglePasswordVisibility() {
+			const password = document.getElementById("password");
+			const cpassword = document.getElementById("cpassword");
+			const type = password.type === "password" ? "text" : "password";
+			password.type = type;
+			cpassword.type = type;
+		}
+	</script>
 </body>
 </html>
