@@ -175,7 +175,7 @@ if (!isset($_SESSION['username'])) {
               <i class="fas fa-user"></i> <?php echo $_SESSION['username']; ?>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="#">Thông tin cá nhân</a>
+              <a class="dropdown-item" href="profile.php">Thông tin cá nhân</a>
               <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
             </div>
           </div>
