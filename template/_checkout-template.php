@@ -1,25 +1,5 @@
 <?php
-    // Include the necessary PHP files and initialize any required classes/objects (like $Cart and $product) here
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (isset($_POST['delete-cart-submit'])) {
-            $deletedrecord = $Cart->deleteCart($_POST['item_id']);
-        }
-
-        // Save for later
-        if (isset($_POST['wishlist-submit'])) {
-            $Cart->saveForLater($_POST['item_id']);
-        }
-
-        // Clear cart
-        if (isset($_POST['clear-cart-submit'])) {
-            $Cart->clearCart();
-        }
-
-        if (isset($_POST['product_proceed_submit'])) {
-            header("Location: checkout.php");
-        }
-    }
+    
 ?>
 
 <section id="cart" class="py-3 mb-5">
