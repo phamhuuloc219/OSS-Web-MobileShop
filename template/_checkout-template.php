@@ -95,7 +95,7 @@
                             <!-- Payment Option 1 -->
                             <div class="form-check payment-option">
                                 <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod1" value="cashOnDelivery">
-                                <img src="https://via.placeholder.com/30x30.png?text=VN" alt="VN">
+                                <img src="./assets/payment-image/cod.png" alt="VN">
                                 <label class="form-check-label" for="paymentMethod1">
                                     Thanh toán khi nhận hàng
                                 </label>
@@ -104,7 +104,7 @@
                             <!-- Payment Option 2 -->
                             <div class="form-check payment-option">
                                 <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod2" value="ATM">
-                                <img src="https://via.placeholder.com/30x30.png?text=ATM" alt="ATM">
+                                <img src="./assets/payment-image/vnpay.png" alt="ATM">
                                 <label class="form-check-label" for="paymentMethod2">
                                     Thanh toán bằng thẻ ATM nội địa (Qua VNPay)
                                 </label>
@@ -113,7 +113,7 @@
                             <!-- Payment Option 3 -->
                             <div class="form-check payment-option">
                                 <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod3" value="internationalCard">
-                                <img src="https://via.placeholder.com/30x30.png?text=Visa" alt="Visa">
+                                <img src="./assets/payment-image/alepay.png" alt="Visa">
                                 <label class="form-check-label" for="paymentMethod3">
                                     Thanh toán bằng thẻ quốc tế Visa, Master, JCB, AMEX, Apple Pay, Google Pay
                                 </label>
@@ -122,67 +122,19 @@
 
                             <!-- Payment Option 4 -->
                             <div class="form-check payment-option">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod4" value="bank">
-                                <img src="https://via.placeholder.com/30x30.png?text=Bank" alt="Bank">
-                                <label class="form-check-label" for="paymentMethod4">
-                                    Ngân hàng Quốc dân (NCB)
-                                </label>
-                                <span class="discount">1 ưu đãi</span>
-                            </div>
-
-                            <!-- Payment Option 5 -->
-                            <div class="form-check payment-option">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod5" value="otherBanks">
-                                <img src="https://via.placeholder.com/30x30.png?text=Other" alt="Other Banks">
-                                <label class="form-check-label" for="paymentMethod5">
-                                    Các ngân hàng khác
-                                </label>
-                            </div>
-
-                            <!-- Payment Option 6 -->
-                            <div class="form-check payment-option">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod6" value="homePayLater">
-                                <img src="https://via.placeholder.com/30x30.png?text=HomePayLater" alt="HomePayLater">
-                                <label class="form-check-label" for="paymentMethod6">
-                                    Thanh toán qua Home PayLater
-                                </label>
-                                <span class="discount">2 ưu đãi</span>
-                            </div>
-
-                            <!-- Payment Option 7 -->
-                            <div class="form-check payment-option">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod7" value="kredivo">
-                                <img src="https://via.placeholder.com/30x30.png?text=Kredivo" alt="Kredivo">
-                                <label class="form-check-label" for="paymentMethod7">
-                                    Thanh toán qua Kredivo
-                                </label>
-                                <span class="discount">1 ưu đãi</span>
-                            </div>
-
-                            <!-- Payment Option 8 -->
-                            <div class="form-check payment-option">
                                 <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod8" value="momo">
-                                <img src="https://via.placeholder.com/30x30.png?text=MoMo" alt="MoMo">
+                                <img src="./assets/payment-image/momo.png" alt="MoMo">
                                 <label class="form-check-label" for="paymentMethod8">
                                     Thanh toán bằng ví MoMo
                                 </label>
                             </div>
 
-                            <!-- Payment Option 9 -->
+                            <!-- Payment Option 5 -->
                             <div class="form-check payment-option">
                                 <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod9" value="zalopay">
-                                <img src="https://via.placeholder.com/30x30.png?text=ZaloPay" alt="ZaloPay">
+                                <img src="./assets/payment-image/zalopay.png" alt="ZaloPay">
                                 <label class="form-check-label" for="paymentMethod9">
                                     Thanh toán bằng ví ZaloPay
-                                </label>
-                            </div>
-
-                            <!-- Payment Option 10 -->
-                            <div class="form-check payment-option">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod10" value="finance">
-                                <img src="https://via.placeholder.com/30x30.png?text=Finance" alt="Finance">
-                                <label class="form-check-label" for="paymentMethod10">
-                                    Trả góp qua nhà tài chính
                                 </label>
                             </div>
                         </div>
@@ -211,3 +163,11 @@
          
     </div>
 </section>
+<style>
+    .payment-option img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+    }
+</style>

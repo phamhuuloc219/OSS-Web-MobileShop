@@ -100,21 +100,18 @@ button, button:focus {
     margin-top: 1rem;
 }
 
-/* Đảm bảo bố cục của .owl-carousell nằm ngang */
 #blogs .owl-carousel {
     display: flex;
-    flex-direction: row; /* Sắp xếp các phần tử theo hàng ngang */
-    justify-content: space-between; /* Căn đều các item */
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-/* Đảm bảo các thẻ .item không bị giới hạn về chiều rộng */
 #blogs .item {
     flex: 1;
-    max-width: 100%; /* Đảm bảo item không bị giới hạn chiều rộng */
-    margin-right: 1rem; /* Khoảng cách giữa các thẻ item */
+    max-width: 100%;
+    margin-right: 1rem;
 }
 
-/* Xóa khoảng cách cuối cùng */
 #blogs .item:last-child {
     margin-right: 0;
 }
@@ -137,28 +134,30 @@ button, button:focus {
 }
 
 .form-container {
-        padding: 30px;
-        background-color: #f8f9fa;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .payment-option {
-        display: flex;
-        align-items: center;
-    }
+.payment-option {
+    display: flex;
+    align-items: center;
+}
 
-    .payment-option img {
-        height: 30px;
-        margin-right: 10px;
-    }
+.form-container .form-check .payment-option img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+}
 
-    .payment-option span {
-        font-size: 14px;
-        color: #555;
-    }
+.payment-option span {
+    font-size: 14px;
+    color: #555;
+}
 
-    .payment-option .discount {
-        font-size: 12px;
-        color: green;
-    }
+.payment-option .discount {
+    font-size: 12px;
+    color: green;
+}
