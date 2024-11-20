@@ -119,22 +119,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- !Shopping cart items -->
     </div>
 </section>
-
-<style>
-    .btn-clear-cart {
-        padding: 5px 15px;
-        border: 1px solid #dc3545;
-        background-color: #dc3545;
-        color: white;
-        font-family: 'Baloo', sans-serif;
-        font-size: 14px;
-        text-transform: uppercase;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .btn-clear-cart:hover {
-        background-color: #c82333;
-    }
-</style>
