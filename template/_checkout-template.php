@@ -16,12 +16,17 @@
                 ?>
                 <!-- Cart item -->
                 <div class="row border-top py-3 mt-3">
+                    <h5 class="font-baloo font-size-20"><?php echo "Sản phẩm trong đơn hàng: "; ?></h5>
+                        
+                </div>
+                <div class="row py-3 mt-3">
                     <div class="col-sm-2">
                         <img src="<?php echo $item['item_image'] ?? "./assets/products/xiaomi_14t.png"; ?>" style="height: 120px;" alt="cart1" class="img-fluid">
                     </div>
                     <div class="col-sm-8">
                         <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
-                        <small>by <?php echo $item['item_brand'] ?? "Brand"; ?></small>
+                        <small>by <?php echo $item['item_brand'] ?? "Brand"; ?></small><br>
+                        <small>quantity <?php echo $item['item_brand'] ?? "Brand"; ?></small>
                     </div>
                     
 
@@ -39,29 +44,35 @@
                 ?>
                 <div class="container mt-5">
                     <div class="form-container">
-                        <h4 class="mb-4">Thông tin đặt hàng</h4>
+                            <h4 class="mb-4">Thông tin đặt hàng</h4>
+                            
+                            <!-- Form -->
+                            <form action="" method="POST">
+                                <!-- Người đặt hàng -->
+                                <div class="form-group">
+                                    <label for="fullName">Họ và tên</label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Nhập họ và tên">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Số điện thoại</label>
+                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Nhập số điện thoại">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email (Không bắt buộc)</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email">
+                                </div>
+                            </form>
+                    </div>
+                <div class="container mt-5">
+                <div class="form-container">        
+                        <h4 class="mb-4">Hình thức nhận hàng</h4>
                         
                         <!-- Form -->
                         <form action="" method="POST">
-                            <!-- Người đặt hàng -->
-                            <div class="form-group">
-                                <label for="fullName">Họ và tên</label>
-                                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Nhập họ và tên">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Số điện thoại</label>
-                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Nhập số điện thoại">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email (Không bắt buộc)</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email">
-                            </div>
-
                             <!-- Hình thức nhận hàng -->
                             <div class="form-group">
-                                <label>Hình thức nhận hàng</label><br>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="deliveryMethod" id="delivery" value="delivery">
                                     <label class="form-check-label" for="delivery">Giao hàng tận nơi</label>
@@ -81,17 +92,15 @@
                                 <label for="note">Ghi chú</label>
                                 <textarea class="form-control" id="note" name="note" rows="3" placeholder="Ví dụ: Hãy gọi tôi khi chuẩn bị hàng xong"></textarea>
                             </div>
-                        </form>
-                    </div>
+                    </form>
+                    </div></div>
                 </div>
                 <div class="container mt-5">
                     <div class="form-container">
-                        <h4 class="mb-4">Thông tin thanh toán</h4>
+                        <h4 class="mb-4">Phương thức thanh toán</h4>
                         
                         <!-- Phương thức thanh toán -->
                         <div class="form-group">
-                            <label>Phương thức thanh toán</label><br>
-
                             <!-- Payment Option 1 -->
                             <div class="form-check payment-option">
                                 <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod1" value="cashOnDelivery">
@@ -164,10 +173,32 @@
     </div>
 </section>
 <style>
-    .payment-option img {
+    .form-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+}
+
+.payment-option img {
     width: 30px;
     height: 30px;
     object-fit: contain;
     margin-right: 10px;
-    }
+}
+
+.payment-option span {
+    font-size: 14px;
+    color: #555;
+}
+
+.payment-option .discount {
+    font-size: 12px;
+    color: green;
+}
 </style>
