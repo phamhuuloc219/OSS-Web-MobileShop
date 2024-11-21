@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                             <span><i class="far fa-star"></i></span>
                         </div>
                         <div class="price py-2">
-                        <span>$<?php echo $item['item_price'] ?? '0' ; ?></span>
+                        <span><?php echo $item['item_price'] ?? '0' ; ?>&#8363;</span>
                         </div>
                      <form method="post">
                             <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
