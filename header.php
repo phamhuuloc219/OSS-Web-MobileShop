@@ -123,9 +123,9 @@ if (!isset($_SESSION['username'])) {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav m-auto font-rubik">
+          <ul class="navbar-nav m-auto font-roboto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">On Sale</a>
+              <a class="nav-link" href="index.php">Giảm giá</a>
             </li>
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -163,14 +163,14 @@ if (!isset($_SESSION['username'])) {
               </div>
             </li>
           </ul>
-          <form action="#" class="font-size-14 font-rubik">
+          <form action="#" class="font-size-14 font-roboto">
                 <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
                     <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
                     <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
                 </a>
           </form>
 
-          <div class="font-rubik font-size-14">
+          <div class="font-roboto font-size-14">
             <a href="#" class="px-3 text-dark dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user"></i> <?php echo $_SESSION['username']; ?>
             </a>
@@ -184,7 +184,7 @@ if (!isset($_SESSION['username'])) {
       </nav>
 
       <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
-        <p class="font-rubik font-size-12 text-black-50 m-0">
+        <p class="font-roboto font-size-15 text-black-50 m-0">
           <img src="https://cdn2.fptshop.com.vn/unsafe/64x0/filters:quality(100)/black_friday_000169f9af.png" alt="black-friday" width="20px">
         <b style="color: red;">Black Friday trúng iPhone 16 Pro Max</b>
         </p>        

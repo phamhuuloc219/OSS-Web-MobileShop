@@ -28,7 +28,7 @@ $conn->close();
 <section id="profile" class="py-3">
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="card text-center" style="width: 18rem;">
-            <img src="./assets/logo.png" class="card-img-top rounded-circle mt-3 mx-auto" alt="User Avatar" style="width: 120px; height: 120px; object-fit: cover;">
+            <img src="./assets/logo.png" class="card-img-top rounded-circle mt-3 mx-auto" alt="User Avatar" style="width: 150px; height: 150px; object-fit: cover;">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $username; ?></h5>
                 <p class="card-text text-muted"><?php echo $email; ?></p>

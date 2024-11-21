@@ -29,13 +29,13 @@ if (!empty($search_query)) {
         foreach ($results as $item) {
             ?>
             <div class="col-md-3 col-sm-6 mb-4">
-                <div class="product font-rubik">
+                <div class="product font-roboto">
                     <a href="<?php printf('%s?item_id=%s', 'product.php',  $item['item_id']); ?>">
                         <img src="<?php echo $item['item_image'] ?? "./assets/products/xiaomi_14t.png"; ?>" alt="product1" class="img-fluid">
                     </a>
                     <div class="text-center">
                         <h6><?php echo $item['item_name'] ?? "Unknown"; ?></h6>
-                        <div class="rating text-warning font-size-12">
+                        <div class="rating text-warning font-size-15">
                             <span><i class="fas fa-star"></i></span>
                             <span><i class="fas fa-star"></i></span>
                             <span><i class="fas fa-star"></i></span>
@@ -51,9 +51,9 @@ if (!empty($search_query)) {
                             <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                             <?php
                             if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])) {
-                                echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
+                                echo '<button type="submit" disabled class="btn btn-success font-size-15">In the Cart</button>';
                             } else {
-                                echo '<button type="submit" name="search_submit" class="btn btn-warning font-size-12" formaction="cart.php">Add to Cart</button>';
+                                echo '<button type="submit" name="search_submit" class="btn btn-warning font-size-15" formaction="cart.php">Thêm vào giỏ hàng</button>';
                             }
                             ?>
                         </form>

@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Raleway&family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Raleway&family=roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 /*              Sass Template           */
 /*  global classes  */
 button, button:focus {
@@ -7,20 +9,18 @@ button, button:focus {
 }
 
 /* typography classes */
-.font-baloo {
-    font-family: "Baloo Thambi 2", cursive;
+
+
+.font-roboto {
+    font-family: "roboto", cursive;
 }
 
-.font-rubik {
-    font-family: "Raleway", cursive;
+.font-roboto {
+    font-family: "roboto", cursive;
 }
 
-.font-rubik {
-    font-family: "Rubik", cursive;
-}
-
-.font-size-12 {
-    font-size: 12px;
+.font-size-15 {
+    font-size: 15px;
 }
 
 .font-size-14 {
@@ -158,6 +158,6 @@ button, button:focus {
 }
 
 .payment-option .discount {
-    font-size: 12px;
+    font-size: 15px;
     color: green;
 }

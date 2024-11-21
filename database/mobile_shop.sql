@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 12, 2024 at 05:48 PM
+-- Host: 157.0.0.1
+-- Generation Time: Nov 15, 2024 at 05:48 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.2.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -55,12 +55,12 @@ CREATE TABLE `product` (
 INSERT INTO `product` (`item_id`, `item_brand`, `item_name`, `item_price`, `item_image`, `item_register`) VALUES
 (3, 'Xiaomi', 'Xiaomi 14T', 25990000.00, './assets/products/xiaomi_14t.png', '2024-11-09 00:00:00'),
 (14, 'Xiaomi', 'Xiaomi 14 Ultra', 26999000.00, './assets/products/xiaomi-14-ultra.png', '2024-11-10 00:00:00'),
-(16, 'NOKIA', 'Nokia 220 4G', 990000.00, './assets/products/nokia-220-4g-den-3.jpg', '2024-11-12 00:00:00'),
-(23, 'Iphone', 'Iphone 16 Pro Max 256GB', 34590000.00, './assets/products/iphone_16_pro_max_desert_titan.png', '2024-11-12 00:00:00'),
-(24, 'Samsung', 'Samsung Galaxy S24 FE 5G 128GB', 16990000.00, './assets/products/samssung_galaxy_s24_fe_xanh.png', '2024-11-12 00:00:00'),
-(25, 'OPPO', 'OPPO A3 6GB 128GB', 4990000.00, './assets/products/oppo_a3_den.jpg', '2024-11-12 00:00:00'),
-(26, 'Samsung', 'Samsung Galaxy Z Fold6 5G 256GB', 41990000.00, './assets/products/samsung_galaxy_z_fold6_gray.png', '2024-11-12 00:00:00'),
-(27, 'Masstel', 'Masstel Izi 16 4G', 450000.00, './assets/products/izi_16_den_4_c4e5c70fe5.jpg', '2024-11-12 00:00:00');
+(16, 'NOKIA', 'Nokia 220 4G', 990000.00, './assets/products/nokia-220-4g-den-3.jpg', '2024-11-15 00:00:00'),
+(23, 'Iphone', 'Iphone 16 Pro Max 256GB', 34590000.00, './assets/products/iphone_16_pro_max_desert_titan.png', '2024-11-15 00:00:00'),
+(24, 'Samsung', 'Samsung Galaxy S24 FE 5G 158GB', 16990000.00, './assets/products/samssung_galaxy_s24_fe_xanh.png', '2024-11-15 00:00:00'),
+(25, 'OPPO', 'OPPO A3 6GB 158GB', 4990000.00, './assets/products/oppo_a3_den.jpg', '2024-11-15 00:00:00'),
+(26, 'Samsung', 'Samsung Galaxy Z Fold6 5G 256GB', 41990000.00, './assets/products/samsung_galaxy_z_fold6_gray.png', '2024-11-15 00:00:00'),
+(27, 'Masstel', 'Masstel Izi 16 4G', 450000.00, './assets/products/izi_16_den_4_c4e5c70fe5.jpg', '2024-11-15 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -125,7 +125,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `product`
