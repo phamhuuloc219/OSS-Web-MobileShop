@@ -78,15 +78,15 @@
                                 <table class="my-3">
                                     <tr class="font-rubik font-size-14">
                                         <td>M.R.P:</td>
-                                        <td><strike><span><?php echo $item['item_price']+1000000 ?? 0; ?></span>&#8363;</strike></td>
+                                        <td><strike><span><?php echo number_format($item['item_price']+1000000 ?? 0, 0, '', '.'); ?></span>&#8363;</strike></td>
                                     </tr>
                                     <tr class="font-rubik font-size-14">
                                         <td>Deal Price:</td>
-                                        <td class="font-size-20 text-danger"><span><?php echo $item['item_price'] ?? 0; ?></span>&#8363;<small class="text-dark font-size-12">&nbsp;&nbsp;Inclusive of all taxes</small></td>
+                                        <td class="font-size-20 text-danger"><span><?php echo number_format($item['item_price'] ?? 0, 0, '', '.'); ?></span>&#8363;<small class="text-dark font-size-12">&nbsp;&nbsp;Inclusive of all taxes</small></td>
                                     </tr>
                                     <tr class="font-rubik font-size-14">
                                         <td>You Save:</td>
-                                        <td><span class="font-size-16 text-danger">1000000&#8363;</span></td>
+                                        <td><span class="font-size-16 text-danger">1.000.000&#8363;</span></td>
                                     </tr>
                                 </table>
                             <!---    !product price       -->

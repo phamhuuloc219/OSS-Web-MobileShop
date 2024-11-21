@@ -93,7 +93,7 @@ class Cart
                 //!floatval() là hàm để chuyển đổi một chuỗi thành một số dấu phẩy động. được trích xuất từ ​​tham số đầu và
                 $sum += floatval($item[0]);
             }
-            return sprintf('%.2f' , $sum);
+            return sprintf('%.0f' , $sum);
         }
     }
    // get item_it of shopping cart list
