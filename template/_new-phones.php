@@ -39,9 +39,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                             //!Hàm in_array() trong php dùng để kiểm tra giá trị nào đó có tồn tại trong mảng hay không.
                             //! Nếu như tồn tại thì nó sẽ trả về TRUE và ngược lại sẽ trả về FALSE 
                             if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
-                                echo '<button type="submit" disabled class="btn btn-success font-size-15">In the Cart</button>';
+                                echo '<button type="submit" disabled class="btn btn-success font-size-15"><b>Đã có trong giỏ hàng</b></button>';
                             }else{
-                                echo '<button type="submit" name="new_phone_submit" class="btn btn-warning font-size-15">Thêm vào giỏ hàng</button>';
+                                echo '<button type="submit" name="new_phone_submit" class="btn btn-warning font-size-15"><b>Thêm vào giỏ hàng</b></button>';
                             }
                             ?>
                            
