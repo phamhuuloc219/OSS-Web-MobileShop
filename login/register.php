@@ -61,8 +61,8 @@ function validateInput($username, $email, $password, $cpassword) {
 }
 
 function validatePassword($password) {
-    if (strlen($password) < 8 || strlen($password) > 12) {
-        alert("Mật khẩu phải từ 8 đến 12 ký tự.");
+    if (strlen($password) < 8 || strlen($password) > 15) {
+        alert("Mật khẩu phải từ 8 đến 15 ký tự.");
         return false;
     }
 
