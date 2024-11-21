@@ -125,11 +125,11 @@ if (!isset($_SESSION['username'])) {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav m-auto font-roboto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">Giảm giá</a>
+              <a class="nav-link " href="index.php">Giảm giá</a>
             </li>
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Category
+                  Danh mục
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="index.php#special-price">Iphone</a>
@@ -144,7 +144,7 @@ if (!isset($_SESSION['username'])) {
               <a class="nav-link" href="blog.php">Blog</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Coming Soon</a>
+              <a class="nav-link" href="#">Sắp ra mắt</a>
             </li>
             <li>
               <div class="search">
@@ -152,7 +152,7 @@ if (!isset($_SESSION['username'])) {
                   <table class="search-item">
                     <tr>
                       <td>
-                        <input type="text" placeholder="Search here" name="query" id="">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" name="query" id="">
                         <button type="search-submit" style="background: none; border: none; padding: 0; margin-left: 5px;">
                           <i class="bx bx-search" style="color: black;"></i>
                         </button>
@@ -184,7 +184,7 @@ if (!isset($_SESSION['username'])) {
       </nav>
 
       <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
-        <p class="font-roboto font-size-15 text-black-50 m-0">
+        <p class="font-roboto font-size-12 text-black-50 m-0">
           <img src="https://cdn2.fptshop.com.vn/unsafe/64x0/filters:quality(100)/black_friday_000169f9af.png" alt="black-friday" width="20px">
         <b style="color: red;">Black Friday trúng iPhone 16 Pro Max</b>
         </p>        
