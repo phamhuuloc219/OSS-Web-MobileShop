@@ -36,9 +36,9 @@
                                         <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                         <?php
                                         if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
-                                            echo '<button type="submit" disable name="product_proceed_submit" class="btn btn-danger form-control" formaction="cart.php">Proceed to Buy</button>';
+                                            echo '<button type="submit" disable name="product_proceed_submit" class="btn btn-danger form-control" formaction="cart.php">Mua ngay</button>';
                                         }else{
-                                            echo '<button type="submit" name="product_proceed_submit" class="btn btn-danger form-control" formaction="cart.php">Proceed to Buy</button>';
+                                            echo '<button type="submit" name="product_proceed_submit" class="btn btn-danger form-control" formaction="cart.php">Mua ngay</button>';
                                         }
                                         ?>
                                     </form>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="col-sm-6 py-5">
                         <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
-                            <small>by <?php echo $item['item_brand'] ?? "Brand"; ?></small>
+                            <small>hãng <?php echo $item['item_brand'] ?? "Brand"; ?></small>
                             <div class="d-flex">
                                 <div class="rating text-warning font-size-15">
                                     <span><i class="fas fa-star"></i></span>
@@ -70,7 +70,7 @@
                                     <span><i class="fas fa-star"></i></span>
                                     <span><i class="far fa-star"></i></span>
                                   </div>
-                                  <a href="#" class="px-2 font-roboto font-size-14">20,534 ratings | 1000+ answered questions</a>
+                                  <a href="#" class="px-2 font-roboto font-size-14">20,534 đánh giá | 1000+ bình luận</a>
                             </div>
                             <hr class="m-0">
 
@@ -81,11 +81,11 @@
                                         <td><strike><span><?php echo number_format($item['item_price']+1000000 ?? 0, 0, '', '.'); ?></span>&#8363;</strike></td>
                                     </tr>
                                     <tr class="font-roboto font-size-14">
-                                        <td>Deal Price:</td>
-                                        <td class="font-size-20 text-danger"><span><?php echo number_format($item['item_price'] ?? 0, 0, '', '.'); ?></span>&#8363;<small class="text-dark font-size-15">&nbsp;&nbsp;Inclusive of all taxes</small></td>
+                                        <td>Giá ưu đãi:</td>
+                                        <td class="font-size-20 text-danger"><span><?php echo number_format($item['item_price'] ?? 0, 0, '', '.'); ?></span>&#8363;<small class="text-dark font-size-15">&nbsp;&nbsp;Bao gồm tất cả các loại thuế</small></td>
                                     </tr>
                                     <tr class="font-roboto font-size-14">
-                                        <td>You Save:</td>
+                                        <td>Tiết kiệm:</td>
                                         <td><span class="font-size-16 text-danger">1.000.000&#8363;</span></td>
                                     </tr>
                                 </table>
@@ -98,19 +98,19 @@
                                             <div class="font-size-20 my-2 color-second">
                                                 <span class="fas fa-retweet border p-3 rounded-pill"></span>
                                             </div>
-                                            <a href="#" class="font-roboto font-size-15">10 Days <br> Replacement</a>
+                                            <a href="#" class="font-roboto font-size-15">10 ngày <br> đổi trả</a>
                                         </div>
                                         <div class="return text-center mr-5">
                                             <div class="font-size-20 my-2 color-second">
                                                 <span class="fas fa-truck  border p-3 rounded-pill"></span>
                                             </div>
-                                            <a href="#" class="font-roboto font-size-15">Daily Tuition <br>Deliverd</a>
+                                            <a href="#" class="font-roboto font-size-15">Miễn phí <br>vận chuyển</a>
                                         </div>
                                         <div class="return text-center mr-5">
                                             <div class="font-size-20 my-2 color-second">
                                                 <span class="fas fa-check-double border p-3 rounded-pill"></span>
                                             </div>
-                                            <a href="#" class="font-roboto font-size-15">1 Year <br>Warranty</a>
+                                            <a href="#" class="font-roboto font-size-15">Bảo hành <br>1 năm</a>
                                         </div>
                                     </div>
                                 </div>
@@ -119,9 +119,9 @@
 
                             <!-- order-details -->
                                 <div id="order-details" class="font-roboto d-flex flex-column text-dark">
-                                    <small>Delivery by : Mar 29  - Apr 1</small>
-                                    <small>Sold by <a href="#">Daily Electronics </a>(4.5 out of 5 | 18,198 ratings)</small>
-                                    <small><i class="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Deliver to Customer - 424201</small>
+                                    <small>Giao hàng bởi : J&T Express</small>
+                                    <small>Bán bởi <a href="#">Mobile Shop  </a>(4.5/5 <span><i class="fas fa-star rating text-warning font-size-15"></i></span> | 18,198 đánh giá)</small>
+                                    <small><i class="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Giao tới khách hàng - 424201</small>
                                 </div>
                              <!-- !order-details -->
 
@@ -130,7 +130,7 @@
                                         <!-- color -->
                                             <div class="color my-3">
                                               <div class="d-flex justify-content-between">
-                                                <h6 class="font-baloo">Color:</h6>
+                                                <h6 class="font-baloo">Màu:</h6>
                                                 <div class="p-2 color-yellow-bg rounded-circle"><button class="btn font-size-14"></button></div>
                                                 <div class="p-2 color-primary-bg rounded-circle"><button class="btn font-size-14"></button></div>
                                                 <div class="p-2 color-second-bg rounded-circle"><button class="btn font-size-14"></button></div>
@@ -141,7 +141,7 @@
                                  <div class="col-6">
                                    <!-- product qty section -->  
                                      <div class="qty d-flex">
-                                         <h6 class="font-baloo">Qty</h6>
+                                         <h6 class="font-baloo">Số lượng</h6>
                                          <div class="px-4 d-flex font-roboto">
                                              <button class="qty-up border bg-light" data-id="pro1"><i class="fas fa-angle-up"></i></button>
                                              <input type="text" data-id="pro1" class="qty_input border px-2 w-50 bg-light" disabled value="1" placeholder="1">
@@ -154,7 +154,7 @@
 
                             <!-- size -->
                                 <div class="size my-3">
-                                    <h6 class="font-baloo">Size :</h6>
+                                    <h6 class="font-baloo">Cấu hình:</h6>
                                     <div class="d-flex justify-content-between w-75">
                                         <div class="font-roboto border p-2">
                                             <button class="btn p-0 font-size-14">4GB RAM</button>
@@ -173,10 +173,10 @@
                         </div>
 
                         <div class="col-15">
-                            <h6 class="font-roboto">Product Description</h6>
+                            <h6 class="font-roboto">Mô tả sản phẩm</h6>
                             <hr>
-                            <p class="font-roboto font-size-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat inventore vero numquam error est ipsa, consequuntur temporibus debitis nobis sit, delectus officia ducimus dolorum sed corrupti. Sapiente optio sunt provident, accusantium eligendi eius reiciendis animi? Laboriosam, optio qui? Numquam, quo fuga. Maiores minus, accusantium velit numquam a aliquam vitae vel?</p>
-                            <p class="font-roboto font-size-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat inventore vero numquam error est ipsa, consequuntur temporibus debitis nobis sit, delectus officia ducimus dolorum sed corrupti. Sapiente optio sunt provident, accusantium eligendi eius reiciendis animi? Laboriosam, optio qui? Numquam, quo fuga. Maiores minus, accusantium velit numquam a aliquam vitae vel?</p>
+                            <p class="font-roboto font-size-14">Sản phẩm điện thoại này mang đến cho người dùng một trải nghiệm tuyệt vời với thiết kế sang trọng, hiện đại và tính năng vượt trội. Được trang bị màn hình sắc nét, hiệu suất mạnh mẽ và camera chất lượng cao, chiếc điện thoại này giúp bạn dễ dàng thực hiện các tác vụ hàng ngày, từ công việc đến giải trí. Với dung lượng pin lâu dài và khả năng kết nối nhanh chóng, sản phẩm sẽ là lựa chọn lý tưởng cho những ai tìm kiếm một chiếc điện thoại vừa tiện dụng, vừa thời trang.</p>
+                            <p class="font-roboto font-size-14">Chiếc điện thoại này sở hữu thiết kế tinh tế, kết hợp giữa vẻ đẹp hiện đại và tính năng vượt trội. Với màn hình lớn, sắc nét và hiệu suất mượt mà, sản phẩm này đáp ứng mọi nhu cầu giải trí và công việc của bạn. Camera chất lượng cao giúp bạn ghi lại những khoảnh khắc tuyệt vời với độ chi tiết rõ nét, trong khi dung lượng pin mạnh mẽ đảm bảo sử dụng lâu dài suốt cả ngày. Được trang bị các công nghệ kết nối nhanh, đây là lựa chọn hoàn hảo cho những ai yêu thích sự tiện lợi và hiệu suất tối ưu.</p>
                         </div>
                     </div>
                 </div>

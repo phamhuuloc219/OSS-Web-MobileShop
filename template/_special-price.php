@@ -18,9 +18,9 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
 ?>
 <section id="special-price">
     <div class="container">
-        <h4 class="font-roboto font-size-20">Special Price</h4>
+        <h4 class="font-roboto font-size-25"><b>Giá siêu hời</b></h4>
         <div id="filters" class="button-group text-right font-baloo font-size-16">
-            <button class="btn is-checked" data-filter="*">All Brand</button>
+            <button class="btn is-checked" data-filter="*">Tất cả thương hiệu</button>
             <?php
                 array_map(function ($brand){
                     printf('<button class="btn" data-filter=".%s">%s</button>', $brand, $brand);

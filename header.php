@@ -125,11 +125,11 @@ if (!isset($_SESSION['username'])) {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav m-auto font-roboto">
             <li class="nav-item active">
-              <a class="nav-link " href="index.php">Giảm giá</a>
+              <a class="nav-link font-size-25" href="index.php"><b>Giảm giá</b></a>
             </li>
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Danh mục
+                  <b>Danh mục</b>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="index.php#special-price">Iphone</a>
@@ -141,10 +141,10 @@ if (!isset($_SESSION['username'])) {
               </div>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="blog.php">Blog</a>
+              <a class="nav-link" href="blog.php"><b>Blog</b></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Sắp ra mắt</a>
+              <a class="nav-link" href="#"><b>Sắp ra mắt</b></a>
             </li>
             <li>
               <div class="search">
