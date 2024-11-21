@@ -53,9 +53,9 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
                                 <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                 <?php
                                 if (in_array($item['item_id'], $in_cart ?? [])){
-                                    echo '<button type="submit" disabled class="btn btn-success font-size-15">In the Cart</button>';
+                                    echo '<button type="submit" disabled class="btn btn-success font-size-15"><b>Đã có trong giỏ hàng</b></button>';
                                 }else{
-                                    echo '<button type="submit" name="special-price_submit" class="btn btn-warning font-size-15">Thêm vào giỏ hàng</button>';
+                                    echo '<button type="submit" name="special-price_submit" class="btn btn-warning font-size-15"><b>Thêm vào giỏ hàng</b></button>';
                                 }
                                 ?>
                             </form>

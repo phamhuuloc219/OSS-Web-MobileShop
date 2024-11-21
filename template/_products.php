@@ -50,7 +50,7 @@
                                         <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                         <?php
                                         if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
-                                            echo '<button type="submit" disabled class="btn btn-success form-control">In the Cart</button>';
+                                            echo '<button type="submit" disabled class="btn btn-success form-control">Đã có trong giỏ hàng</button>';
                                         }else{
                                             echo '<button type="submit" name="product_submit" class="btn btn-warning form-control">Thêm vào giỏ hàng</button>';
                                         }
