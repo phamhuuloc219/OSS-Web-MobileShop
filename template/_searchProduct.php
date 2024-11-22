@@ -19,7 +19,7 @@ if (!empty($search_query)) {
 
 <section id="search" class="py-3 mb-5">
     <div class="container-fluid w-75">
-        <h5 class="font-baloo font-size-20">Search Result</h5>
+        <h5 class="font-baloo font-size-20">Kết quả tìm kiếm: <?php echo $search_query; ?></h5>
         <hr>
         <div class="row">
 
