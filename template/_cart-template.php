@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
-        <h5 class="font-baloo font-size-20">Shopping Cart</h5>
+        <h5 class="font-baloo font-size-20">Giỏ hàng</h5>
 
         <!-- Shopping cart items -->
         <div class="row">
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                     <div class="col-sm-8">
                         <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
-                        <small>by <?php echo $item['item_brand'] ?? "Brand"; ?></small>
+                        <small>hãng <?php echo $item['item_brand'] ?? "Brand"; ?></small>
                         <!-- Product rating -->
                         <div class="d-flex">
                             <div class="rating text-warning font-size-15">
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="far fa-star"></i></span>
                             </div>
-                            <a href="#" class="px-2 font-roboto font-size-14">20,534 ratings</a>
+                            <a href="#" class="px-2 font-roboto font-size-14">20,534 đánh giá</a>
                         </div>
                         <!-- !Product rating -->
 
@@ -67,12 +67,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                             <form method="post">
                                 <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
-                                <button type="submit" name="delete-cart-submit" class="btn font-baloo text-danger px-3 border-right">Delete</button>
+                                <button type="submit" name="delete-cart-submit" class="btn font-baloo text-danger px-3 border-right">Xóa</button>
                             </form>
 
                             <form method="post">
                                 <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
-                                <button type="submit" name="wishlist-submit" class="btn font-baloo text-danger">Save for Later</button>
+                                <button type="submit" name="wishlist-submit" class="btn font-baloo text-danger">Thêm vào yêu thích</button>
                             </form>
                         </div>
                         <!-- !Product quantity -->
@@ -95,14 +95,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <!-- Subtotal section -->
             <div class="col-sm-3">
                 <div class="sub-total border text-center mt-2">
-                    <h6 class="font-size-15 font-roboto text-success py-3"><i class="fas fa-check"></i> Your order is eligible for FREE Delivery.</h6>
+                    <h6 class="font-size-15 font-roboto text-success py-3"><i class="fas fa-check"></i>Đơn hàng miễn phí vận chuyển.</h6>
                     <div class="border-top py-4">
-                        <h5 class="font-baloo font-size-20">Subtotal ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> item):&nbsp; 
+                        <h5 class="font-baloo font-size-20">Tổng ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> sản phẩm):&nbsp; 
                             <span class="text-danger"><span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span>&#8363;</span>
                         </h5>
                         <!-- Form for Proceed to Buy -->
                         <form method="post">
-                            <button type="submit" name="product_proceed_submit" class="btn btn-warning mt-3">Proceed to Buy</button>
+                            <button type="submit" name="product_proceed_submit" class="btn btn-warning mt-3">Tiến hành thanh toán</button>
                         </form>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <!-- Clear cart button -->
             <div>
                 <form method="post">
-                    <button type="submit" name="clear-cart-submit" class="btn btn-clear-cart font-baloo px-3 border-right border-left">Clear Cart</button>
+                    <button type="submit" name="clear-cart-submit" class="btn btn-clear-cart font-baloo px-3 border-right border-left">Xóa tất cả</button>
                 </form>
             </div>
         </div>
