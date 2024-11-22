@@ -43,7 +43,7 @@ if (!empty($search_query)) {
                             <span><i class="far fa-star"></i></span>
                         </div>
                         <div class="price py-2">
-                            <span>$<?php echo $item['item_price'] ?? '0' ?></span>
+                            <span><?php echo number_format($item['item_price'] ?? 0, 0, '', '.'); ?>&#8363;</span>
                         </div>
                         <form method="post" action="cart.php"> 
                             <input type="hidden" name="query" value="<?php echo htmlspecialchars($search_query); ?>">
