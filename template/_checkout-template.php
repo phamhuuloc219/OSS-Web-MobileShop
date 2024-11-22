@@ -4,7 +4,7 @@
 
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
-        <h5 class="font-baloo font-size-20">Shopping Cart</h5>
+        <h5 class="font-baloo font-size-20">Thanh toán</h5>
 
         <!-- Shopping cart items -->
         <div class="row">
@@ -25,8 +25,8 @@
                     </div>
                     <div class="col-sm-8">
                         <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
-                        <small>by <?php echo $item['item_brand'] ?? "Brand"; ?></small><br>
-                        <small>quantity <?php echo $item['item_brand'] ?? "Brand"; ?></small>
+                        <small>hãng <?php echo $item['item_brand'] ?? "Brand"; ?></small><br>
+                        <small>số lượng <?php echo $item['item_brand'] ?? "Brand"; ?></small>
                     </div>
                     
 
@@ -154,14 +154,14 @@
             <!-- Subtotal section -->
             <div class="col-sm-3">
                 <div class="sub-total border text-center mt-2">
-                    <h6 class="font-size-15 font-roboto text-success py-3"><i class="fas fa-check"></i> Your order is eligible for FREE Delivery.</h6>
+                    <h6 class="font-size-15 font-roboto text-success py-3"><i class="fas fa-check"></i> Đơn hàng miễn phí vận chuyển.</h6>
                     <div class="border-top py-4">
-                        <h5 class="font-baloo font-size-20">Subtotal ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> item):&nbsp; 
+                        <h5 class="font-baloo font-size-20">Tổng ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> sản phẩm):&nbsp; 
                             <span class="text-danger"><span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?>&#8363;</span></span>
                         </h5>
                         <!-- Form for Proceed to Buy -->
                         <form method="post">
-                            <button type="submit" name="buy_submit" class="btn btn-warning mt-3">Buy Now</button>
+                            <button type="submit" name="buy_submit" class="btn btn-warning mt-3">Mua sắm ngay</button>
                         </form>
                     </div>
                 </div>
