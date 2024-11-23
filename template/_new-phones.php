@@ -22,13 +22,25 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                     <a href="<?php printf('%s?item_id=%s', 'product.php',  $item['item_id']); ?>"><img src="<?php echo $item['item_image'] ?? "./assets/products/xiaomi_14t.png"; ?>" alt="product1" class="img-fluid"></a>
                     <div class="text-center">
                         <h6><?php echo  $item['item_name'] ?? "Unknown";  ?></h6>
-                        <div class="rating text-warning font-size-15">
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="far fa-star"></i></span>
-                        </div>
+                        <?php
+                            $rating = mt_rand(8, 10) / 2;
+                            $fullStars = floor($rating);
+                            $emptyStars = 5 - ceil($rating);
+
+                            echo '<div class="rating text-warning font-size-15">';
+                            for ($i = 0; $i < $fullStars; $i++) {
+                                echo '<span><i class="fas fa-star"></i></span>';
+                            }
+
+                            if ($rating - $fullStars >= 0.5) {
+                                echo '<span><i class="fas fa-star-half-alt"></i></span>';
+                            }
+
+                            for ($i = 0; $i < $emptyStars; $i++) {
+                                echo '<span><i class="far fa-star"></i></span>';
+                            }
+                            echo '</div>';
+                            ?>
                         <div class="price py-2">
                         <span><?php echo number_format($item['item_price'] ?? 0, 0, '', '.'); ?>&#8363;</span>
                         </div>

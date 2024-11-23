@@ -1,15 +1,15 @@
 <!-- Shopping cart section  -->
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if (isset($_POST['delete-cart-submit'])){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['delete-cart-submit'])) {
         $deletedrecord = $Cart->deleteWishlist($_POST['item_id']);
     }
 
-    if(isset($_POST['cart-submit'])){
+    if (isset($_POST['cart-submit'])) {
         $Cart->saveForLater($_POST['item_id'], 'cart', 'wishlist');
     }
 }
-?>   
+?>
 
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
@@ -21,8 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <?php
                 foreach ($product->getData('wishlist') as $item) :
                     $cart = $product->getProduct($item['item_id']);
-                    $subTotal[] = array_map(function ($item){
-                        ?>
+                    $subTotal[] = array_map(function ($item) {
+                ?>
                         <!-- cart item -->
                         <div class="row border-top py-3 mt-3">
                             <div class="col-sm-2">
@@ -40,7 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         <span><i class="fas fa-star"></i></span>
                                         <span><i class="far fa-star"></i></span>
                                     </div>
-                                    <a href="#" class="px-2 font-roboto font-size-14">20,534 đánh giá</a>
+                                    <a href="#" class="px-2 font-roboto font-size-14"><?php
+                                                                                        $randomNumber = mt_rand(100, 1000);
+                                                                                        echo $randomNumber;
+                                                                                        ?> đánh giá</a>
                                 </div>
                                 <!--  !product rating-->
 
@@ -70,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                             </div>
                         </div>
                         <!-- !cart item -->
-                        <?php
+                <?php
                         return $item['item_price'];
                     }, $cart); // closing array_map function
                 endforeach;
