@@ -1,9 +1,6 @@
 <?php
-	include 'config.php';
 	session_start();
-	if (!isset($_SESSION['username'])) {
-		header("Location: login/index.php");
-	}
+	include 'config.php';
 	mysqli_set_charset($conn,'utf8mb4');
 	$update=false;
 	$id="";
@@ -15,9 +12,10 @@
 		$name=$_POST['name'];
 		$email=$_POST['email'];
 		$password=$_POST['password'];
+		$hashedPassword = md5($password);
 		$query="INSERT INTO users(id,username,email,password)VALUES(?,?,?,?)";
 		$stmt=$conn->prepare($query);
-		$stmt->bind_param("ssss",$id,$name,$email,$password);
+		$stmt->bind_param("ssss",$id,$name,$email,$hashedPassword);
 		$stmt->execute();
 		header('location:index.php');
 		$_SESSION['response']="Successfully Inserted to the database!";
@@ -56,9 +54,10 @@
 		$name=$_POST['name'];
 		$email=$_POST['email'];
 		$password=$_POST['password'];
+		$hashedPassword = md5($password);
 		$query="UPDATE users SET username=?,email=?,password=? WHERE id=?";
 		$stmt=$conn->prepare($query);
-		$stmt->bind_param("ssss",$name,$email,$password,$id);
+		$stmt->bind_param("ssss",$name,$email,$hashedPassword,$id);
 		$stmt->execute();
 		$_SESSION['response']="Updated Successfully!";
 		$_SESSION['res_type']="primary";

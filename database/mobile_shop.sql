@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2024 at 05:34 PM
+-- Generation Time: Nov 23, 2024 at 06:31 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `mobile_shop`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(11) NOT NULL,
+  `adminname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`id`, `adminname`, `email`, `password`) VALUES
+(1, 'admin', 'admin@gmail.com', '88888888');
 
 -- --------------------------------------------------------
 
@@ -91,7 +111,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 (6, 'Hữu Lộc', 'loc@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
 (7, 'Thanh Tiền', 'thanhtien@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
-(9, 'Thanh Thảo', 'thanhthao1@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909');
+(9, 'Thanh Thảo', 'thanhthao1@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
+(14, 'admi', 'a@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
+(15, 'đa', 'da@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909');
 
 -- --------------------------------------------------------
 
@@ -117,6 +139,12 @@ INSERT INTO `wishlist` (`cart_id`, `user_id`, `item_id`) VALUES
 --
 
 --
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
@@ -139,6 +167,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
@@ -154,7 +188,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

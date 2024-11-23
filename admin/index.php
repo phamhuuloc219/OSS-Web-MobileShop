@@ -1,5 +1,9 @@
 <?php
   include 'action.php';
+  
+if (!isset($_SESSION['adminname'])) {
+  header("Location: login/index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +57,7 @@
     <!--admin logout and account-->
     <div class="font-roboto font-size-14">
             <a href="#" class="px-3 text-light dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i> <?php echo $_SESSION['username']; ?>
+              <i class="fas fa-user"></i> <?php echo $_SESSION['adminname']; ?>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
               <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>

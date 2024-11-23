@@ -53,7 +53,7 @@
     <!--admin logout and account-->
     <div class="font-roboto font-size-14">
             <a href="#" class="px-3 text-light dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i> <?php echo $_SESSION['username']; ?>
+              <i class="fas fa-user"></i> <?php echo $_SESSION['adminname']; ?>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
               <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
@@ -76,24 +76,7 @@
     <div class="row">
       <div class="col-md-4">
         <h3 class="text-center text-info">Add Product</h3>
-        <form action="actionCart.php" method="post" enctype="multipart/form-data">
-          <div class="form-group">
-            <input type="text" name="cart" value="<?= $cart; ?>" class="form-control" placeholder="Enter brand" required>
-          </div>
-          <div class="form-group">
-            <input type="text" name="user" value="<?= $user; ?>" class="form-control" placeholder="Enter e-name" required>
-          </div>
-          <div class="form-group">
-            <input type="number" name="item" value="<?= $item; ?>" class="form-control" placeholder="Enter price" required>
-          </div>
-          <div class="form-group">
-            <?php if ($update == true) { ?>
-            <input type="submit" name="update" class="btn btn-success btn-block" value="Update Record">
-            <?php } else { ?>
-            <input type="submit" name="add" class="btn btn-primary btn-block" value="Add Record">
-            <?php } ?>
-          </div>
-        </form>
+        
       </div>
       <div class="col-md-8">
         <?php

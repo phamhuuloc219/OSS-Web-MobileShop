@@ -6,7 +6,7 @@ session_start();
 
 error_reporting(0);
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['adminname'])) {
     header("Location: ../index.php");
 }
 
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
 	$result = mysqli_query($conn, $sql);
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
-		$_SESSION['username'] = $row['username'];
+		$_SESSION['adminname'] = $row['adminname'];
 		header("Location: ./index.php");
 	} else {
 		echo "<script>alert('Rất tiếc! Email hoặc mật khẩu sai.')</script>";
