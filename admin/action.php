@@ -1,6 +1,9 @@
 <?php
-	session_start();
 	include 'config.php';
+	session_start();
+	if (!isset($_SESSION['username'])) {
+		header("Location: login/index.php");
+	}
 	mysqli_set_charset($conn,'utf8mb4');
 	$update=false;
 	$id="";
