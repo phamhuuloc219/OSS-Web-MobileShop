@@ -21,7 +21,7 @@
                 </div>
                 <div class="row py-3 mt-3">
                     <div class="col-sm-2">
-                        <img src="<?php echo $item['item_image'] ?? "./assets/products/xiaomi_14t.png"; ?>" style="height: 150px;" alt="cart1" class="img-fluid">
+                        <img src="<?php echo $item['item_image'] ?? "./assets/products/xiaomi_14t.png"; ?>" style="height: 120px;" alt="cart1" class="img-fluid">
                     </div>
                     <div class="col-sm-8">
                         <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
