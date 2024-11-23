@@ -77,7 +77,7 @@
           <div class="form-group">
             <input type="hidden" name="oldimage" value="<?= $image; ?>">
             <input type="file" name="image" class="custom-file">
-            <img src="<?= $image; ?>" width="150" class="img-thumbnail">
+            <img src="<?= $image; ?>" width="120" class="img-thumbnail">
           </div>
           <div class="form-group">
             <input type="date" name="date" value="<?= $date; ?>" class="form-control" placeholder="Enter date" required>
