@@ -4,7 +4,7 @@ ob_start();
 ?>
 
 <?php
-    
+    include ('template/_temp.php');
     /*  include banner area  */
     include ('template/_banner-area.php');
     /*  include banner area  */

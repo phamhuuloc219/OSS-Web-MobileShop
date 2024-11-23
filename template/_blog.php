@@ -1,30 +1,40 @@
-
 <!-- Blogs -->
-<section id="blogs">
-    <div class="container py-4">
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <div class="card border-0 font-roboto mr-5" style="width: 18rem;">
-                    <h5 class="card-title font-size-16">Sắp ra mắt</h5>
-                    <img src="./assets/blog/find_x8.jpg" alt="cart image" class="card-img-top">
-                    <p class="card-text font-size-14 text-black-50 py-1">Ngày ra mắt toàn cầu của OPPO Find X8 series đã được xác nhận</p>
-                    <a href="https://fptshop.com.vn/tin-tuc/tin-moi/ngay-ra-mat-toan-cau-cua-oppo-find-x8-series-161428" class="color-second text-left">Đi đến trang</a>
+<section id="blogs" class="blogs-section py-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Blog Item 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./assets/blog/find_x8.jpg" alt="OPPO Find X8" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Sắp ra mắt</h5>
+                        <p class="card-text">Những chiếc điện thoại thông minh sắp ra mắt từ các hãng lớn như Apple, Samsung, và Xiaomi...</p>
+                        <a href="https://fptshop.com.vn/tin-tuc/tin-moi/ngay-ra-mat-toan-cau-cua-oppo-find-x8-series-161428" class="mt-auto text-primary">Đi đến trang</a>
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="card border-0 font-roboto mr-5" style="width: 18rem;">
-                    <h5 class="card-title font-size-16">Hồ sơ blog</h5>
-                    <img src="./assets/blog/blog2.jpg" alt="cart image" class="card-img-top">
-                    <p class="card-text font-size-14 text-black-50 py-1">Profile PHL</p>
-                    <a href="https://phamhuuloc219.github.io" class="color-second text-left">Đi đến trang</a>
+
+            <!-- Blog Item 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./assets/blog/blog2.jpg" alt="Hồ sơ blog" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Hồ sơ blog</h5>
+                        <p class="card-text">Shop chúng tôi chuyên cung cấp các dòng điện thoại thông minh chính hãng từ các thương hiệu hàng đầu...</p>
+                        <a href="https://phamhuuloc219.github.io" class="mt-auto text-primary">Đi đến trang</a>
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="card border-0 font-roboto mr-5" style="width: 18rem;">
-                    <h5 class="card-title font-size-16"> Trở thành một nhà phát triển giỏi</h5>
-                    <img src="./assets/blog/220px-W3Schools_logo.svg.webp" alt="cart image" class="card-img-top">
-                    <p class="card-text font-size-14 text-black-50 py-1">Learn everything about information technology knowledge</p>
-                    <a href="https://www.w3schools.com/" class="color-second text-left">Đi đến trang</a>
+
+            <!-- Blog Item 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./assets/blog/220px-W3Schools_logo.svg.webp" alt="Trở thành nhà phát triển" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Deploy Web</h5>
+                        <p class="card-text">Để triển khai một website, đầu tiên bạn cần chọn nền tảng hosting phù hợp như Netlify, Vercel...</p>
+                        <a href="https://www.w3schools.com/" class="mt-auto text-primary">Đi đến trang</a>
+                    </div>
                 </div>
             </div>
         </div>
