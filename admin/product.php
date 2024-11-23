@@ -31,7 +31,7 @@
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="index.php">Manager User</a>
+    <a class="navbar-brand" href="index.php">User</a>
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -40,10 +40,10 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="product.php">Product</a>
+          <a class="nav-link" href="product.php">Sản phẩm</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="cart.php">Cart Product</a>
+          <a class="nav-link" href="cart.php">Giỏ hàng</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="about.php">About</a>
@@ -63,7 +63,7 @@
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <h3 class="text-center text-dark mt-2">Manager Product Phone</h3>
+        <h3 class="text-center text-dark mt-2">Quản lý sản phẩm</h3>
         <hr>
         <?php if (isset($_SESSION['response'])) { ?>
         <div class="alert alert-<?= $_SESSION['res_type']; ?> alert-dismissible text-center">

@@ -35,7 +35,7 @@ if (!isset($_SESSION['adminname'])) {
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="#">Manager User</a>
+    <a class="navbar-brand" href="#">User</a>
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -44,10 +44,10 @@ if (!isset($_SESSION['adminname'])) {
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="product.php">Product</a>
+          <a class="nav-link" href="product.php">Sản phẩm</a>
         </li>
         <li class="nav-item active">
-        <a class="nav-link" href="cart.php">Cart Product</a>
+        <a class="nav-link" href="cart.php">Giỏ hàng</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="about.php">About</a>
@@ -67,7 +67,7 @@ if (!isset($_SESSION['adminname'])) {
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <h3 class="text-center text-dark mt-2">Manager User of Admin</h3>
+        <h3 class="text-center text-dark mt-2">Quản lý người dùng</h3>
         <hr>
         <?php if (isset($_SESSION['response'])) { ?>
         <div class="alert alert-<?= $_SESSION['res_type']; ?> alert-dismissible text-center">
@@ -79,23 +79,23 @@ if (!isset($_SESSION['adminname'])) {
     </div>
     <div class="row">
       <div class="col-md-4">
-        <h3 class="text-center text-info">Add User</h3>
+        <h3 class="text-center text-info">Thêm mới</h3>
         <form action="action.php" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id" value="<?= $id; ?>">
           <div class="form-group">
-            <input type="text" name="name" value="<?= $name; ?>" class="form-control" placeholder="Enter name" required>
+            <input type="text" name="name" value="<?= $name; ?>" class="form-control" placeholder="Tên người dùng" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" value="<?= $email; ?>" class="form-control" placeholder="Enter e-mail" required>
+            <input type="email" name="email" value="<?= $email; ?>" class="form-control" placeholder="Nhập địa chỉ mail" required>
           </div>
           <div class="form-group">
-            <input type="password" name="password" value="<?= $password; ?>" class="form-control" placeholder="Enter password" required>
+            <input type="password" name="password" value="<?= $password; ?>" class="form-control" placeholder="Mật khẩu người dùng" required>
           </div>
           <div class="form-group">
             <?php if ($update == true) { ?>
-            <input type="submit" name="update" class="btn btn-success btn-block" value="Update Record">
+            <input type="submit" name="update" class="btn btn-success btn-block" value="Cập nhật">
             <?php } else { ?>
-            <input type="submit" name="add" class="btn btn-primary btn-block" value="Add Record">
+            <input type="submit" name="add" class="btn btn-primary btn-block" value="Thêm">
             <?php } ?>
           </div>
         </form>
@@ -107,15 +107,15 @@ if (!isset($_SESSION['adminname'])) {
           $stmt->execute();
           $result = $stmt->get_result();
         ?>
-        <h3 class="text-center text-info">Show user all Database</h3>
+        <h3 class="text-center text-info">Tất cả người dùng trong hệ thống</h3>
         <table class="table table-hover" id="data-table">
           <thead>
             <tr>
               <th>#id</th>
-              <th>Name</th>
+              <th>Tên</th>
               <th>Email</th>
-              <th>Password</th>
-              <th>Action</th>
+              <th>Mật khẩu</th>
+              <th>Chức năng</th>
             </tr>
           </thead>
           <tbody>
@@ -127,9 +127,9 @@ if (!isset($_SESSION['adminname'])) {
               <td><?= $row['password']; ?></td>
               
               <td>
-                <a href="details.php?details=<?= $row['id']; ?>" class="badge badge-primary p-2">Details</a> |
-                <a href="action.php?delete=<?= $row['id']; ?>" class="badge badge-danger p-2" onclick="return confirm('Do you want delete this record?');">Delete</a> |
-                <a href="index.php?edit=<?= $row['id']; ?>" class="badge badge-success p-2">Edit</a>
+                <a href="details.php?details=<?= $row['id']; ?>" class="badge badge-primary p-2">Chi tiết</a> |
+                <a href="action.php?delete=<?= $row['id']; ?>" class="badge badge-danger p-2" onclick="return confirm('Bạn có muốn xóa người dùng này ?');">Xóa</a> |
+                <a href="index.php?edit=<?= $row['id']; ?>" class="badge badge-success p-2">Sửa</a>
               </td>
             </tr>
             <?php } ?>

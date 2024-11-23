@@ -18,7 +18,7 @@
 		$stmt->bind_param("ssss",$id,$name,$email,$hashedPassword);
 		$stmt->execute();
 		header('location:index.php');
-		$_SESSION['response']="Successfully Inserted to the database!";
+		$_SESSION['response']="Thêm người dùng thành công!";
 		$_SESSION['res_type']="success";
 
 	}
@@ -31,7 +31,7 @@
 		$stmt->bind_param("i",$id);
 		$stmt->execute();
 		header('location:index.php');
-		$_SESSION['response']="Successfully Deleted!";
+		$_SESSION['response']="Xóa thành công!";
 		$_SESSION['res_type']="danger";
 	}
 	if(isset($_GET['edit'])){
@@ -59,7 +59,7 @@
 		$stmt=$conn->prepare($query);
 		$stmt->bind_param("ssss",$name,$email,$hashedPassword,$id);
 		$stmt->execute();
-		$_SESSION['response']="Updated Successfully!";
+		$_SESSION['response']="Cập nhật thành công!";
 		$_SESSION['res_type']="primary";
 		header('location:index.php');
 	}
