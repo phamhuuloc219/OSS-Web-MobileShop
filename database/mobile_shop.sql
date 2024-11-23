@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 157.0.0.1
--- Generation Time: Nov 15, 2024 at 05:48 PM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 23, 2024 at 05:34 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.15
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,6 +33,13 @@ CREATE TABLE `cart` (
   `item_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`cart_id`, `user_id`, `item_id`) VALUES
+(277, 1, 25);
+
 -- --------------------------------------------------------
 
 --
@@ -55,12 +62,14 @@ CREATE TABLE `product` (
 INSERT INTO `product` (`item_id`, `item_brand`, `item_name`, `item_price`, `item_image`, `item_register`) VALUES
 (3, 'Xiaomi', 'Xiaomi 14T', 25990000.00, './assets/products/xiaomi_14t.png', '2024-11-09 00:00:00'),
 (14, 'Xiaomi', 'Xiaomi 14 Ultra', 26999000.00, './assets/products/xiaomi-14-ultra.png', '2024-11-10 00:00:00'),
-(16, 'NOKIA', 'Nokia 220 4G', 990000.00, './assets/products/nokia-220-4g-den-3.jpg', '2024-11-15 00:00:00'),
-(23, 'Iphone', 'Iphone 16 Pro Max 256GB', 34590000.00, './assets/products/iphone_16_pro_max_desert_titan.png', '2024-11-15 00:00:00'),
-(24, 'Samsung', 'Samsung Galaxy S24 FE 5G 158GB', 16990000.00, './assets/products/samssung_galaxy_s24_fe_xanh.png', '2024-11-15 00:00:00'),
-(25, 'OPPO', 'OPPO A3 6GB 158GB', 4990000.00, './assets/products/oppo_a3_den.jpg', '2024-11-15 00:00:00'),
-(26, 'Samsung', 'Samsung Galaxy Z Fold6 5G 256GB', 41990000.00, './assets/products/samsung_galaxy_z_fold6_gray.png', '2024-11-15 00:00:00'),
-(27, 'Masstel', 'Masstel Izi 16 4G', 450000.00, './assets/products/izi_16_den_4_c4e5c70fe5.jpg', '2024-11-15 00:00:00');
+(16, 'Benco', 'Benco V91 Plus 6GB 128GB', 2990000.00, './assets/products/benco_v91_plus_xam_3_8241448b3c.jpg', '2024-11-23 00:00:00'),
+(23, 'Iphone', 'Iphone 16 Pro Max 256GB', 34590000.00, './assets/products/iphone_16_pro_max_desert_titan.png', '2024-11-12 00:00:00'),
+(24, 'Samsung', 'Samsung Galaxy S24 FE 5G 128GB', 16990000.00, './assets/products/samssung_galaxy_s24_fe_xanh.png', '2024-11-12 00:00:00'),
+(25, 'OPPO', 'OPPO A3 6GB 128GB', 4990000.00, './assets/products/oppo_a3_den.jpg', '2024-11-12 00:00:00'),
+(26, 'Samsung', 'Samsung Galaxy Z Fold6 5G 256GB', 41990000.00, './assets/products/samsung_galaxy_z_fold6_gray.png', '2024-11-12 00:00:00'),
+(27, 'OPPO', 'OPPO Reno8 T 4G 8GB-256GB', 5490000.00, './assets/products/oppo-reno8-t-4g-cam-5.jpg', '2024-11-23 00:00:00'),
+(28, 'Benco', 'Benco V91c 4GB 128GB', 2490000.00, './assets/products/benco_v91c_xam_1_3bdf228d6e.jpg', '2024-11-23 00:00:00'),
+(29, 'Iphone', 'iPhone 15 Pro Max 256GB', 29590000.00, './assets/products/iphone-15-promax-xanh-1.jpg', '2024-11-23 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -80,8 +89,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(6, 'loc', 'loc@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
-(7, 'Thanh Tiền', 'thanhtien@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909');
+(6, 'Hữu Lộc', 'loc@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
+(7, 'Thanh Tiền', 'thanhtien@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
+(9, 'Thanh Thảo', 'thanhthao1@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909');
 
 -- --------------------------------------------------------
 
@@ -94,6 +104,13 @@ CREATE TABLE `wishlist` (
   `user_id` int(11) NOT NULL,
   `item_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `wishlist`
+--
+
+INSERT INTO `wishlist` (`cart_id`, `user_id`, `item_id`) VALUES
+(278, 1, 23);
 
 --
 -- Indexes for dumped tables
@@ -125,19 +142,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=279;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
