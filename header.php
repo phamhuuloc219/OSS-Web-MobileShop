@@ -144,7 +144,7 @@ if (!isset($_SESSION['username'])) {
               <a class="nav-link" href="blog.php"><b>Blog</b></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#"><b>Sắp ra mắt</b></a>
+              <a class="nav-link" href="comingsoon.php"><b>Sắp ra mắt</b></a>
             </li>
             <li>
               <div class="search">
