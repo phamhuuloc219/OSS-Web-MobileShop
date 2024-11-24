@@ -142,7 +142,7 @@ function alert($msg) {
 			<div class="input-group">
 				<button name="submit" class="btn">Đăng ký</button>
 			</div>
-			<p class="login-register-text">Bạn đã có tài khoảng? <a href="index.php">Đăng nhập ở đây</a>.</p>
+			<p class="login-register-text">Bạn đã có tài khoản? <a href="index.php">Đăng nhập ở đây</a>.</p>
 		</form>
 	</div>
 

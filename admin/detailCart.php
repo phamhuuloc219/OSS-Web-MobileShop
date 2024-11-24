@@ -9,7 +9,7 @@
   <meta name="author" content="Sahil Kumar">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Admin - Cart Details</title>
+  <title>Quản trị viên - Chi tiết giỏ hàng</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <!-- jQuery library -->
@@ -23,7 +23,7 @@
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="javascript:window.history.back(-1);">Go back ◀️</a>
+    <a class="navbar-brand" href="javascript:window.history.back(-1);">Quay lại ◀️</a>
     <!-- Toggler/collapsibe Button -->
   
   </nav>
@@ -34,8 +34,8 @@
         <div class="text-center">
         </div>
         <h4 class="text-light">STT : <?= $vcart; ?></h4>
-        <h4 class="text-light">User_id : <?= $vuser; ?></h4>
-        <h4 class="text-light">Item_id : <?= $vitem; ?></h4>
+        <h4 class="text-light">ID_người dùng : <?= $vuser; ?></h4>
+        <h4 class="text-light">ID_sản phẩm : <?= $vitem; ?></h4>
       </div>
     </div>
   </div>

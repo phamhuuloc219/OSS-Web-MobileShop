@@ -13,7 +13,7 @@ if (!isset($_SESSION['adminname'])) {
   <meta name="author" content="Sahil Kumar">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Admin</title>
+  <title>Quản trị viên</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <!-- jQuery library -->
@@ -35,7 +35,7 @@ if (!isset($_SESSION['adminname'])) {
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="#">User</a>
+    <a class="navbar-brand" href="#">Người dùng</a>
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@ if (!isset($_SESSION['adminname'])) {
         <a class="nav-link" href="cart.php">Giỏ hàng</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="about.php">About</a>
+          <a class="nav-link" href="about.php">Thông tin</a>
         </li>
       </ul>
     </div>
@@ -60,7 +60,7 @@ if (!isset($_SESSION['adminname'])) {
               <i class="fas fa-user"></i> <?php echo $_SESSION['adminname']; ?>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+              <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
             </div>
           </div>
   </nav>

@@ -9,7 +9,7 @@
   <meta name="author" content="Sahil Kumar">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Admin - Cart</title>
+  <title>Quản lý giỏ hàng</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <!-- jQuery library -->
@@ -31,7 +31,7 @@
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="index.php">Manager User</a>
+    <a class="navbar-brand" href="index.php">Quản lý người dùng</a>
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -40,13 +40,13 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="product.php">Product</a>
+          <a class="nav-link" href="product.php">Sản phẩm</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="cart.php">Cart Product</a>
+          <a class="nav-link" href="cart.php">Giỏ hàng</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="about.php">About</a>
+          <a class="nav-link" href="about.php">Thông tin</a>
         </li>
       </ul>
     </div>
@@ -56,14 +56,14 @@
               <i class="fas fa-user"></i> <?php echo $_SESSION['adminname']; ?>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+              <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
             </div>
           </div>
   </nav>
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <h3 class="text-center text-dark mt-2">Manager Cart Product Phone</h3>
+        <h3 class="text-center text-dark mt-2">Quản lý giỏ hàng </h3>
         <hr>
         <?php if (isset($_SESSION['response'])) { ?>
         <div class="alert alert-<?= $_SESSION['res_type']; ?> alert-dismissible text-center">
@@ -75,7 +75,7 @@
     </div>
     <div class="row">
       <div class="col-md-4">
-        <h3 class="text-center text-info">Add Product</h3>
+        <h3 class="text-center text-info">Thêm sản phẩm</h3>
         
       </div>
       <div class="col-md-8">
@@ -85,13 +85,13 @@
           $stmt->execute();
           $result = $stmt->get_result();
         ?>
-        <h3 class="text-center text-info">Information Product Company Mobile Phone</h3>
+        <h3 class="text-center text-info">Thông tin Sản phẩm </h3>
         <table class="table table-hover" id="data-table">
           <thead>
             <tr>
               <th>STT</th>
-              <th>User ID</th>
-              <th>Item_id</th>
+              <th>ID_người dùng</th>
+              <th>ID_sản phẩm</th>
             </tr>
           </thead>
           <tbody>
@@ -101,9 +101,9 @@
               <td><?= $row['user_id']; ?></td>
               <td><?= $row['item_id']; ?></td>
               <td>
-                <a href="detailCart.php?details=<?= $row['cart_id']; ?>" class="badge badge-primary p-2">Details</a> |
-                <a href="actionCart.php?delete=<?= $row['cart_id']; ?>" class="badge badge-danger p-2" onclick="return confirm('Do you want delete this record?');">Delete</a> |
-                <a href="Cart.php?edit=<?= $row['cart_id']; ?>" class="badge badge-success p-2">Edit</a>
+                <a href="detailCart.php?details=<?= $row['cart_id']; ?>" class="badge badge-primary p-2">Chi tiết</a> |
+                <a href="actionCart.php?delete=<?= $row['cart_id']; ?>" class="badge badge-danger p-2" onclick="return confirm('Do you want delete this record?');">Xóa</a> |
+                <a href="Cart.php?edit=<?= $row['cart_id']; ?>" class="badge badge-success p-2">Sửa</a>
               </td>
             </tr>
             <?php } ?>

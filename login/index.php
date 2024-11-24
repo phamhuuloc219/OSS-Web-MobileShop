@@ -36,26 +36,26 @@ if (isset($_POST['submit'])) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>Login - Mobile Shop</title>
+	<title>Đăng nhập - Mobile Shop</title>
 </head>
 <body>
 	<div class="container">
 		<form action="" method="POST" class="login-email">
-			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
+			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Đăng nhập</p>
 			<div class="input-group">
 				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
 			</div>
 			<div class="input-group">
-				<input type="password" placeholder="Password" id="password" name="password" value="<?php echo $_POST['password']; ?>" required>
+				<input type="password" placeholder="Mật khẩu" id="password" name="password" value="<?php echo $_POST['password']; ?>" required>
 			</div>
 			<div>
 				<input type="checkbox" id="showPasswordToggle" onclick="togglePasswordVisibility()"> 
-				<label for="showPasswordToggle">Show password</label>
+				<label for="showPasswordToggle">Hiện mật khẩu</label>
 			</div>
 			<div class="input-group">
-				<button name="submit" class="btn">Login</button>
+				<button name="submit" class="btn">Đăng nhập</button>
 			</div>
-			<p class="login-register-text">Don't have an account? <a href="register.php">Register Here</a>.</p>
+			<p class="login-register-text">Bạn chưa có tài khoản? <a href="register.php">Đăng ký ở đây</a>.</p>
 		</form>
 	</div>
 
