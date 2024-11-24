@@ -117,32 +117,32 @@ function alert($msg) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>Register Form - Mobile Shop</title>
+	<title>Đăng ký - Mobile Shop</title>
 </head>
 <body>
 	<div class="container">
 		<form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
+            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Đăng ký</p>
 			<div class="input-group">
-				<input type="text" placeholder="Username" name="username" value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>" required>
+				<input type="text" placeholder="Họ tên" name="username" value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>" required>
 			</div>
 			<div class="input-group">
 				<input type="email" placeholder="Email" name="email" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" required>
 			</div>
 			<div class="input-group">
-				<input type="password" placeholder="Password" id="password" name="password" value="<?php echo isset($_POST['password']) ? htmlspecialchars($_POST['password']) : ''; ?>" required>
+				<input type="password" placeholder="Mật khẩu" id="password" name="password" value="<?php echo isset($_POST['password']) ? htmlspecialchars($_POST['password']) : ''; ?>" required>
             </div>
             <div class="input-group">
-				<input type="password" placeholder="Confirm Password" id="cpassword" name="cpassword" value="<?php echo isset($_POST['cpassword']) ? htmlspecialchars($_POST['cpassword']) : ''; ?>" required>
+				<input type="password" placeholder="Xác nhận mật khẩu" id="cpassword" name="cpassword" value="<?php echo isset($_POST['cpassword']) ? htmlspecialchars($_POST['cpassword']) : ''; ?>" required>
 			</div>
 			<div>
 				<input type="checkbox" id="showPasswordToggle" onclick="togglePasswordVisibility()"> 
-				<label for="showPasswordToggle">Show password</label>
+				<label for="showPasswordToggle">Hiện mật khẩu</label>
 			</div>
 			<div class="input-group">
-				<button name="submit" class="btn">Register</button>
+				<button name="submit" class="btn">Đăng ký</button>
 			</div>
-			<p class="login-register-text">Have an account? <a href="index.php">Login Here</a>.</p>
+			<p class="login-register-text">Bạn đã có tài khoảng? <a href="index.php">Đăng nhập ở đây</a>.</p>
 		</form>
 	</div>
 
