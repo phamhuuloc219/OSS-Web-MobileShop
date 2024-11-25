@@ -71,7 +71,7 @@
           $stmt->execute();
           $result = $stmt->get_result();
         ?>
-        <h3 class="text-center text-info">Thông tin danh sách các sản phẩm</h3>
+        <h3 class="text-center text-info">Thông tin các bài đăng blog</h3>
         <table class="table table-hover" id="data-table">
           <thead>
             <tr>
@@ -96,6 +96,7 @@
               <td><?= $row['blog_author']; ?></td>
 
               <td>
+                <a href="addBlog.php" class="badge badge-info p-2">Thêm</a>
                 <a href="detailsBlog.php?details=<?= $row['blog_id']; ?>" class="badge badge-primary p-2">Chi tiết</a> |
                 <a href="actionBlog.php?delete=<?= $row['blog_id']; ?>" class="badge badge-danger p-2" onclick="return confirm('Do you want delete this record?');">Xóa</a> |
                 <a href="editBlog.php?id=<?= $row['blog_id']; ?>" class="badge badge-success p-2">Sửa</a>
