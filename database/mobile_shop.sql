@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2024 at 06:31 PM
+-- Generation Time: Nov 25, 2024 at 04:09 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,6 +44,29 @@ INSERT INTO `admins` (`id`, `adminname`, `email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `blog`
+--
+
+CREATE TABLE `blog` (
+  `blog_id` int(11) NOT NULL,
+  `blog_title` varchar(255) NOT NULL,
+  `blog_content` text NOT NULL,
+  `blog_describe` text NOT NULL,
+  `blog_image` varchar(255) NOT NULL,
+  `blog_register` datetime NOT NULL,
+  `blog_author` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `blog`
+--
+
+INSERT INTO `blog` (`blog_id`, `blog_title`, `blog_content`, `blog_describe`, `blog_image`, `blog_register`, `blog_author`) VALUES
+(1, 'Lumia 1020 tiếp tục giảm giá, chỉ còn dưới 10 triệu đồng.', 'Chỉ với 10 triệu đồng, chúng ta đã có thể sở hữu chiếc điện thoại chụp hình tốt nhất hiện nay - Lumia 1020.', 'Lumia 1020 - chiếc siêu di động chụp hình đẹp nhất trên thế giới thời điểm hiện tại - đang được bán với giá 10 triệu đồng tại một số đại lý lớn. Các siêu thị điện máy, điện thoại cũng đang bán Lumia 1020 với giá thấp hơn 12 triệu đồng, như Nguyễn Kim (11 triệu), Viễn Thông A và Viettel Store (10 triệu đồng).', './assets/blog/blog1.jpg', '0000-00-00 00:00:00', 'zing');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cart`
 --
 
@@ -58,7 +81,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`cart_id`, `user_id`, `item_id`) VALUES
-(277, 1, 25);
+(287, 1, 28),
+(288, 1, 14),
+(289, 1, 24);
 
 -- --------------------------------------------------------
 
@@ -112,8 +137,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 (6, 'Hữu Lộc', 'loc@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
 (7, 'Thanh Tiền', 'thanhtien@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
 (9, 'Thanh Thảo', 'thanhthao1@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
-(14, 'admi', 'a@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909'),
-(15, 'đa', 'da@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909');
+(14, 'admi', 'a@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909');
 
 -- --------------------------------------------------------
 
@@ -128,13 +152,6 @@ CREATE TABLE `wishlist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `wishlist`
---
-
-INSERT INTO `wishlist` (`cart_id`, `user_id`, `item_id`) VALUES
-(278, 1, 23);
-
---
 -- Indexes for dumped tables
 --
 
@@ -143,6 +160,12 @@ INSERT INTO `wishlist` (`cart_id`, `user_id`, `item_id`) VALUES
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blog`
+--
+ALTER TABLE `blog`
+  ADD PRIMARY KEY (`blog_id`);
 
 --
 -- Indexes for table `cart`
@@ -173,10 +196,16 @@ ALTER TABLE `admins`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `blog`
+--
+ALTER TABLE `blog`
+  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=279;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=290;
 
 --
 -- AUTO_INCREMENT for table `product`

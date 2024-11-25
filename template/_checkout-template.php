@@ -9,24 +9,24 @@
         <!-- Shopping cart items -->
         <div class="row">
             <div class="col-sm-9">
+            <div class="row border-top py-3 mt-3">
+                    <h5 class="font-baloo font-size-20"><?php echo "Sản phẩm trong đơn hàng: "; ?></h5>
+                        
+                </div>
                 <?php
                     foreach ($product->getData('cart') as $item) :
                         $cart = $product->getProduct($item['item_id']);
                         $subTotal[] = array_map(function ($item) {
                 ?>
                 <!-- Cart item -->
-                <div class="row border-top py-3 mt-3">
-                    <h5 class="font-baloo font-size-20"><?php echo "Sản phẩm trong đơn hàng: "; ?></h5>
-                        
-                </div>
+                
                 <div class="row py-3 mt-3">
                     <div class="col-sm-2">
                         <img src="<?php echo $item['item_image'] ?? "./assets/products/xiaomi_14t.png"; ?>" style="height: 120px;" alt="cart1" class="img-fluid">
                     </div>
                     <div class="col-sm-8">
                         <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
-                        <small>hãng <?php echo $item['item_brand'] ?? "Brand"; ?></small><br>
-                        <small>số lượng <?php echo $item['item_brand'] ?? "Brand"; ?></small>
+                        <small>hãng <?php echo $item['item_brand'] ?? "Brand"; ?></small>
                     </div>
                     
 
