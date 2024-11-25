@@ -1,6 +1,12 @@
 <?php
-    
+
+
+
 ?>
+
+
+    
+
 
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
@@ -51,12 +57,12 @@
                                 <!-- Người đặt hàng -->
                                 <div class="form-group">
                                     <label for="fullName">Họ và tên</label>
-                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Nhập họ và tên">
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Nhập họ và tên" require>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="phone">Số điện thoại</label>
-                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Nhập số điện thoại">
+                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Nhập số điện thoại" require >
                                 </div>
 
                                 <div class="form-group">
@@ -74,18 +80,18 @@
                             <!-- Hình thức nhận hàng -->
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="deliveryMethod" id="delivery" value="delivery">
+                                    <input class="form-check-input" type="radio" name="deliveryMethod" id="delivery" value="delivery" require >
                                     <label class="form-check-label" for="delivery">Giao hàng tận nơi</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="deliveryMethod" id="pickup" value="pickup">
+                                    <input class="form-check-input" type="radio" name="deliveryMethod" id="pickup" value="pickup" require>
                                     <label class="form-check-label" for="pickup">Nhận tại cửa hàng</label>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="address">Địa chỉ</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Nhập Tỉnh/Thành phố, Quận/Huyện, Phường/Xã">
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Nhập Tỉnh/Thành phố, Quận/Huyện, Phường/Xã" require>
                             </div>
 
                             <div class="form-group">
