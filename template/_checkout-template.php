@@ -160,7 +160,9 @@
                             <span class="text-danger"><span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?>&#8363;</span></span>
                         </h5>
                         <!-- Form for Proceed to Buy -->
-                        <form method="post">
+                        <form method="post" action="vnpay_create_payment.php">
+                            <input type="hidden" name="orderTotal" value="<?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?>">
+                            <input type="hidden" name="orderInfo" value="Thanh toán đơn hàng">
                             <button type="submit" name="buy_submit" class="btn btn-warning mt-3">Mua sắm ngay</button>
                         </form>
                     </div>

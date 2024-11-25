@@ -1,0 +1,28 @@
+.blogImage img{
+
+    width: 100%;
+}
+.blogTextAll{
+  background-color: rgb(84, 212, 212,0.1);
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+
+}
+.blogHead{
+    text-transform: capitalize;
+}
+.blogPostMeta{
+    display: flex;
+    justify-content: space-between;
+}
+.authorName{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 1rem;
+}
+.shareBtn{
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+.shareBtn svg:hover{
+    cursor: pointer;
+}

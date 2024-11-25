@@ -35,7 +35,7 @@ if (!isset($_SESSION['adminname'])) {
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="#">Người dùng</a>
+    <a class="navbar-brand" href="#">Quản lý người dùng</a>
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -51,6 +51,9 @@ if (!isset($_SESSION['adminname'])) {
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="about.php">Thông tin</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="blog.php">Blog</a>
         </li>
       </ul>
     </div>

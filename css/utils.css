@@ -1,0 +1,110 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+      
+}
+html{
+  height: 100%;
+}
+.max-width-95 {
+  max-width: 95vw;
+}
+.max-width-1 {
+  max-width: 80vw;
+}
+.max-width-2 {
+  max-width: 60vw;
+  
+}
+.margin-auto{
+    margin: auto;
+}
+.btn{
+  height: 2rem;
+  width:4.5rem;
+  padding: 1px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.btn-pink{
+  background-color: rgb(84, 212, 212);
+  border: 1px solid rgb(84, 212, 212);
+  color: white;
+  transition: all .3s ease-in-out;
+
+}
+.btn-pink:hover{
+  background-color: rgb(141, 207, 207);
+  border: 2px solid rgb(127, 219, 219);
+}
+.form-input{
+  padding: 7px;
+  border: 2px solid rgb(141, 207, 207);
+  border-radius: 5px;
+  width: 70%;
+  font-size: 1rem ;
+}
+.form-content{
+  
+  display: flex;
+  flex-direction: column;
+}
+.form-content label{
+  margin-bottom: .5rem;
+}
+.form-content input{
+  margin-bottom: 1rem;
+}
+.navRight .form-input{
+
+  width: 200px;
+
+}
+.form-input:hover{
+  outline: 2px solid rgb(141, 207, 207);
+  
+}
+.m-1{
+  margin: 1rem 0rem;
+}
+.m-2{
+  margin: 2rem 0rem;
+}
+.m-3{
+  margin: 3rem 0rem;
+}
+.m-15{  
+  margin: 1.5rem 0rem;
+}
+.m-25{
+  margin: 2.5rem 0rem;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-muted{
+color: gray;
+}
+
+.p-1{
+  padding: 1vh;
+}
+.p-2{
+  padding: 2rem;
+}
+.p-3{
+  padding: 1vh;
+}
+.p-15{
+  padding: 1.5rem;
+}
+.p-25{
+  padding: 2.5rem;
+}

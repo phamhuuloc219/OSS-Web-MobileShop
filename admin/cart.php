@@ -48,6 +48,9 @@
         <li class="nav-item active">
           <a class="nav-link" href="about.php">Thông tin</a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="blog.php">Blog</a>
+        </li>
       </ul>
     </div>
     <!--admin logout and account-->

@@ -146,6 +146,9 @@ if (!isset($_SESSION['username'])) {
             <li class="nav-item active">
               <a class="nav-link" href="comingsoon.php"><b>Sắp ra mắt</b></a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.php"><b>Liên hệ</b></a>
+            </li>
             <li>
               <div class="search">
                 <form action="search.php" method="POST">
