@@ -33,13 +33,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <small>hãng <?php echo $item['item_brand'] ?? "Brand"; ?></small>
                                 <!-- product rating -->
                                 <div class="d-flex">
-                                    <div class="rating text-warning font-size-15">
-                                        <span><i class="fas fa-star"></i></span>
-                                        <span><i class="fas fa-star"></i></span>
-                                        <span><i class="fas fa-star"></i></span>
-                                        <span><i class="fas fa-star"></i></span>
-                                        <span><i class="far fa-star"></i></span>
-                                    </div>
+                                    <?php
+                                    $rating = mt_rand(8, 10) / 2;
+                                    $fullStars = floor($rating);
+                                    $emptyStars = 5 - ceil($rating);
+
+                                    echo '<div class="rating text-warning font-size-15">';
+                                    for ($i = 0; $i < $fullStars; $i++) {
+                                        echo '<span><i class="fas fa-star"></i></span>';
+                                    }
+
+                                    if ($rating - $fullStars >= 0.5) {
+                                        echo '<span><i class="fas fa-star-half-alt"></i></span>';
+                                    }
+
+                                    for ($i = 0; $i < $emptyStars; $i++) {
+                                        echo '<span><i class="far fa-star"></i></span>';
+                                    }
+                                    echo '</div>';
+                                    ?>
                                     <a href="#" class="px-2 font-roboto font-size-14"><?php
                                                                                         $randomNumber = mt_rand(100, 1000);
                                                                                         echo $randomNumber;
