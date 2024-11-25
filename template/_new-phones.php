@@ -68,3 +68,51 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     </div>
 </section>
 <!-- !Top Sale -->
+<style>
+    .product {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Đảm bảo nội dung được căn đều từ trên xuống */
+        height: 100%;
+        /* Đảm bảo tất cả thẻ có chiều cao bằng nhau */
+        border: 1px solid #ddd;
+        /* Đường viền cho mỗi thẻ */
+        padding: 15px;
+        box-sizing: border-box;
+        /* Tính padding trong chiều cao và chiều rộng */
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .product img {
+        max-width: 100%;
+        /* Đảm bảo hình ảnh không vượt quá kích thước thẻ */
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .product h6 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        /* Không cho phép xuống dòng */
+        overflow: hidden;
+        /* Ẩn nội dung thừa */
+        text-overflow: ellipsis;
+        /* Hiển thị dấu "..." nếu vượt quá */
+    }
+
+    .product .text-center {
+        margin-top: auto;
+        /* Đẩy nút xuống cuối cùng */
+    }
+
+    .price {
+        font-size: 18px;
+        color: #e60023;
+        /* Màu giá */
+        margin-bottom: 10px;
+    }
+</style>

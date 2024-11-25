@@ -77,11 +77,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
-        <h3 class="text-center text-info">Đây là trang chứa thông tin sản phẩm trong giỏ hàng</h3>
-        
+      <div class="col-md-3">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-9">
         <?php
           $query = 'SELECT * FROM cart';
           $stmt = $conn->prepare($query);
