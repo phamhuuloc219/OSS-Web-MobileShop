@@ -78,7 +78,7 @@
     </div>
     <div class="row">
       <div class="col-md-4">
-        <h3 class="text-center text-info">Thêm sản phẩm</h3>
+        <h3 class="text-center text-info">Đây là trang chứa thông tin sản phẩm trong giỏ hàng</h3>
         
       </div>
       <div class="col-md-8">
