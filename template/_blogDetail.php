@@ -1,6 +1,8 @@
 <?php
 // Kết nối đến cơ sở dữ liệu
 
+   
+include ('template/_temp.php');
    include './admin/actionBlog.php';
 
    
