@@ -92,7 +92,7 @@ $conn->close();
                 </div>
                 <div class="card-footer">
                     <a class="btn btn-primary" href="blog.php" role="button">Hủy</a>
-                    <button type="submit">Thêm</button>
+                    <button class="btn btn-info" type="submit">Thêm</button>
                 </div>
             </div>
             

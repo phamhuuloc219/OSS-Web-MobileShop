@@ -1,5 +1,5 @@
 <?php
-  include 'actionProduct.php';
+include 'actionProduct.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +22,8 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css" />
   <!-- font awesome icons -->
   <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
 </head>
@@ -56,37 +55,44 @@
     </div>
     <!--admin logout and account-->
     <div class="font-roboto font-size-14">
-            <a href="#" class="px-3 text-light dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i> <?php echo $_SESSION['adminname']; ?>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
-            </div>
-          </div>
+      <a href="#" class="px-3 text-light dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-user"></i> <?php echo $_SESSION['adminname']; ?>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+        <a class="dropdown-item" href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
+      </div>
+    </div>
   </nav>
-  
-      <div class="col-md-8">
-        <?php
-          $query = 'SELECT * FROM blog';
-          $stmt = $conn->prepare($query);
-          $stmt->execute();
-          $result = $stmt->get_result();
-        ?>
-        <h3 class="text-center text-info">Thông tin danh sách các sản phẩm</h3>
-        <table class="table table-hover" id="data-table">
-          <thead>
-            <tr>
-              <th>id</th>
-              <th>Ảnh</th>
-              <th>Tiêu đề</th>
-              <th>Nội dung</th>
-              <th>Miêu tả</th>
-              <th>Ngày</th>
-              <th>Tác giả</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php while ($row = $result->fetch_assoc()) { ?>
+  <div class="row">
+    <div class="col-md-4">
+    <h3 class="text-center text-info">Thêm mới blog</h3>
+      <form action="" method="post">
+        <a href="addBlog.php" class="btn btn-primary btn-block">Thêm Blog</a>
+      </form>
+    </div>
+
+    <div class="col-md-8">
+      <?php
+      $query = 'SELECT * FROM blog';
+      $stmt = $conn->prepare($query);
+      $stmt->execute();
+      $result = $stmt->get_result();
+      ?>
+      <h3 class="text-center text-info">Thông tin danh sách các sản phẩm</h3>
+      <table class="table table-hover" id="data-table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Ảnh</th>
+            <th>Tiêu đề</th>
+            <th>Nội dung</th>
+            <th>Miêu tả</th>
+            <th>Ngày</th>
+            <th>Tác giả</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php while ($row = $result->fetch_assoc()) { ?>
             <tr>
               <td><?= $row['blog_id']; ?></td>
               <td><img src=".<?= $row['blog_image']; ?>" width="25"></td>
@@ -102,18 +108,19 @@
                 <a href="editBlog.php?id=<?= $row['blog_id']; ?>" class="badge badge-success p-2">Sửa</a>
               </td>
             </tr>
-            <?php } ?>
-          </tbody>
-        </table>
-      </div>
+          <?php } ?>
+        </tbody>
+      </table>
     </div>
   </div>
+  </div>
+  </div>
   <script type="text/javascript">
-  $(document).ready(function() {
-    $('#data-table').DataTable({
-      paging: true
+    $(document).ready(function() {
+      $('#data-table').DataTable({
+        paging: true
+      });
     });
-  });
   </script>
 </body>
 
