@@ -10,6 +10,7 @@ $error = $_SESSION["mail_error"];
 
 ?>
   <link rel="stylesheet" href="css/dist/contact.css">
+  <link rel="icon" href="./assets/logo1.png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <?php
