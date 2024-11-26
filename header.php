@@ -158,7 +158,7 @@ if (!isset($_SESSION['username'])) {
                       <td>
                         <input type="text" placeholder="Tìm kiếm sản phẩm" name="query" id="">
                         <button type="search-submit" style="background: none; border: none; padding: 0; margin-left: 5px;">
-                          <i class="bx bx-search" style="color: black;"></i>
+                          <i class="bx bx-search" style="color: black;  "></i>
                         </button>
                       </td>
                     </tr>

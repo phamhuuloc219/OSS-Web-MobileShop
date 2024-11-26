@@ -5,6 +5,7 @@
 ?>
 
 
+
     
 
 
@@ -180,6 +181,43 @@
          
     </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('form[action="vnpay_create_payment.php"]');
+
+    form.addEventListener("submit", function (event) {
+        const fullName = document.getElementById("fullName").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const deliveryMethod = document.querySelector('input[name="deliveryMethod"]:checked');
+        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+
+        let errorMessage = "";
+
+        if (!fullName) {
+            errorMessage += "Họ và tên không được để trống.\n";
+        }
+        if (!phone) {
+            errorMessage += "Số điện thoại không được để trống.\n";
+        }
+        if (!address) {
+            errorMessage += "Địa chỉ không được để trống.\n";
+        }
+        if (!deliveryMethod) {
+            errorMessage += "Vui lòng chọn hình thức nhận hàng.\n";
+        }
+        if (!paymentMethod) {
+            errorMessage += "Vui lòng chọn phương thức thanh toán.\n";
+        }
+
+        if (errorMessage) {
+            alert(errorMessage); // Hiển thị lỗi
+            event.preventDefault(); // Ngăn form gửi đi nếu có lỗi
+        }
+    });
+});
+
+</script>
 <style>
     .form-container {
     padding: 30px;
