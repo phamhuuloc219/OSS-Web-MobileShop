@@ -1,40 +1,40 @@
 <?php
 require_once("vnpay_config.php");
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $errors = [];
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//     $errors = [];
 
-    $fullName = $_POST['fullName'] ?? '';
-    $phone = $_POST['phone'] ?? '';
-    $address = $_POST['address'] ?? '';
-    $deliveryMethod = $_POST['deliveryMethod'] ?? '';
-    $paymentMethod = $_POST['paymentMethod'] ?? '';
+//     $fullName = $_POST['fullName'] ?? '';
+//     $phone = $_POST['phone'] ?? '';
+//     $address = $_POST['address'] ?? '';
+//     $deliveryMethod = $_POST['deliveryMethod'] ?? '';
+//     $paymentMethod = $_POST['paymentMethod'] ?? '';
 
-    if (empty($fullName)) {
-        $errors[] = "Họ và tên không được để trống.";
-    }
-    if (empty($phone)) {
-        $errors[] = "Số điện thoại không được để trống.";
-    }
-    if (empty($address)) {
-        $errors[] = "Địa chỉ không được để trống.";
-    }
-    if (empty($deliveryMethod)) {
-        $errors[] = "Hình thức nhận hàng chưa được chọn.";
-    }
-    if (empty($paymentMethod)) {
-        $errors[] = "Phương thức thanh toán chưa được chọn.";
-    }
+//     if (empty($fullName)) {
+//         $errors[] = "Họ và tên không được để trống.";
+//     }
+//     if (empty($phone)) {
+//         $errors[] = "Số điện thoại không được để trống.";
+//     }
+//     if (empty($address)) {
+//         $errors[] = "Địa chỉ không được để trống.";
+//     }
+//     if (empty($deliveryMethod)) {
+//         $errors[] = "Hình thức nhận hàng chưa được chọn.";
+//     }
+//     if (empty($paymentMethod)) {
+//         $errors[] = "Phương thức thanh toán chưa được chọn.";
+//     }
 
-    if ($errors) {
-        foreach ($errors as $error) {
-            echo "<p class='text-danger'>$error</p>";
-        }
-        exit; // Dừng thực hiện nếu có lỗi
-    }
+//     if ($errors) {
+//         foreach ($errors as $error) {
+//             echo "<p class='text-danger'>$error</p>";
+//         }
+//         exit; // Dừng thực hiện nếu có lỗi
+//     }
 
-    // Xử lý logic thanh toán ở đây
-}
+//     // Xử lý logic thanh toán ở đây
+// }
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
